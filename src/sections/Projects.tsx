@@ -162,7 +162,7 @@ function Projects() {
                   <div className="project-image-overlay"></div>
                   <div className="project-image-container">
                     <Image
-                      src={image}
+                      src={`${image}`}
                       fill
                       alt={projectName}
                       quality={100}
