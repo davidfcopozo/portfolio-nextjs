@@ -25,7 +25,7 @@ function Loader({ isLoading, setIsLoading }: any) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
           >
-            <title>David Francisco's Logo</title>
+            <title>David Francisco&apos;s Logo</title>
             <g>
               <g id="K" transform="translate(40.000000, 35.000000)">
                 <motion.path
