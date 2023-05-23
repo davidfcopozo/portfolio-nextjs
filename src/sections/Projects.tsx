@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Projects() {
   const projectsData = [
     {
-      image: "/static/images/sound-scale.png",
+      image: "/sound-scale.png",
       projectName: "SoundScale",
       projectLink: "https://github.com/No-Country/s7-25-ft-desafioreactnative",
       projectDescription:
@@ -26,7 +26,7 @@ function Projects() {
       },
     },
     {
-      image: "/static/images/mascotapp.png",
+      image: "/mascotapp.png",
       projectName: "MascotApp",
       projectLink: "https://github.com/No-Country/C9-37-ReactNative",
       projectDescription:
@@ -44,7 +44,7 @@ function Projects() {
       },
     },
     {
-      image: "/static/images/rainbow-george.png",
+      image: "/rainbow-george.png",
       projectName: "Jorge García's Website",
       projectLink: "https://www.rainbowgeorge.es/",
       projectDescription:
@@ -56,7 +56,7 @@ function Projects() {
       },
     },
     {
-      image: "/static/images/transportesligeros-juank.png",
+      image: "/transportesligeros-juank.png",
       projectName: "Transportes Ligeros JuanK",
       projectLink: "https://www.transportesligeros.es/",
       projectDescription:
@@ -75,7 +75,7 @@ function Projects() {
       },
     },
     {
-      image: "/static/images/budget-buddy.png",
+      image: "/budget-buddy.png",
       projectName: "Budget Buddy",
       projectLink: "https://budget-buddy-d0db6.web.app/",
       projectDescription:
@@ -98,7 +98,7 @@ function Projects() {
       },
     },
     {
-      image: "/static/images/shortlify.png",
+      image: "/shortlify.png",
       projectName: "Shortlify",
       projectLink: "https://davidfcopozo.github.io/url-shortener-app/",
       projectDescription:
