@@ -1,0 +1,204 @@
+.skills {
+  overflow: hidden;
+  .title {
+    margin-top: 1rem;
+    padding-block: 2rem;
+    h2 {
+      font-family: var(--raleway);
+      color: var(--theme-color);
+      position: relative;
+      margin-bottom: 2rem;
+      font-size: var(--tx2large);
+      font-weight: 700;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 2px;
+        margin-left: 420px;
+        background-color: var(--lightest-navy);
+      }
+    }
+  }
+  .lang-wrapper-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .language-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      align-items: center;
+      color: var(--lang-icon-color);
+
+      .typescript,
+      .fa-html5,
+      .fa-css3,
+      .fa-js,
+      .fa-sass,
+      .fa-react,
+      .fa-bootstrap,
+      .fa-node-js,
+      .cib-next-js,
+      .cib-redux,
+      .fa-fan,
+      .fa-node-js {
+        font-size: 8rem;
+        color: var(--lang-icon-color);
+      }
+
+      .typescript:hover,
+      .fa-html5:hover,
+      .fa-css3:hover,
+      .fa-js:hover,
+      .fa-sass:hover,
+      .fa-react:hover,
+      .fa-bootstrap:hover,
+      .fa-node-js:hover,
+      .cib-next-js:hover,
+      .cib-redux:hover,
+      .fa-fan:hover {
+        -webkit-transition: ease-in-out 0.3s;
+        -o-transition: ease-in-out 0.3s;
+        transition: ease-in-out 0.3s;
+        transform: scale(1.1);
+      }
+
+      .fa-html5:hover {
+        color: #e34e26;
+      }
+
+      .fa-css3:hover {
+        color: #0277bd;
+      }
+
+      .fa-js:hover {
+        color: #d4b830;
+      }
+
+      .fa-sass:hover {
+        color: #cd6799;
+      }
+
+      .fa-react:hover {
+        color: #53c1de;
+      }
+
+      .fa-bootstrap:hover {
+        color: #563d7c;
+      }
+
+      .cib-next-js:hover {
+        fill: #474747;
+      }
+
+      .cib-redux:hover {
+        fill: #764abc;
+      }
+
+      .fa-fan:hover {
+        color: #f23e50;
+      }
+    }
+  }
+  .learning-skills {
+    margin-top: 4rem;
+    padding-block: 3rem;
+    h2 {
+      font-family: var(--raleway);
+      color: var(--theme-color);
+      position: relative;
+      margin-bottom: 2rem;
+      font-size: var(--tx2large);
+      font-weight: 700;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 2px;
+        margin-left: 420px;
+        background-color: var(--lightest-navy);
+      }
+    }
+    .learning-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+
+      .language-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+        color: var(--lang-icon-color);
+      }
+
+      .typescript,
+      .fa-node-js {
+        font-size: 8rem;
+        color: var(--lang-icon-color);
+      }
+
+      .typescript:hover,
+      .fa-node-js:hover {
+        -webkit-transition: ease-in-out 0.3s;
+        -o-transition: ease-in-out 0.3s;
+        transition: ease-in-out 0.3s;
+        transform: scale(1.1);
+      }
+
+      .typescript:hover {
+        color: #007acc;
+      }
+
+      .fa-node-js:hover {
+        color: #74b15b;
+      }
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    .title {
+      h2 {
+        &::after {
+          width: 100px;
+        }
+      }
+    }
+    .lang-wrapper-container {
+      .language-wrapper {
+        .typescript,
+        .fa-html5,
+        .fa-css3,
+        .fa-js,
+        .fa-sass,
+        .fa-react,
+        .fa-bootstrap,
+        .fa-node-js,
+        .cib-next-js,
+        .cib-redux,
+        .fa-fan,
+        .fa-node-js {
+          font-size: 5rem;
+        }
+      }
+    }
+    .learning-skills {
+      .language-wrapper {
+        .typescript,
+        .fa-node-js {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}
