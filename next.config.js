@@ -8,6 +8,8 @@ const nextConfig = {
       "portafolio-eta-ten.vercel.app",
     ],
   },
+  output: "standalone",
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;
