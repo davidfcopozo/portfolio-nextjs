@@ -263,22 +263,6 @@
   }
   @media screen and (max-width: 680px) {
     margin: 5rem 0;
-    /*    &:nth-of-type(even) {
-      justify-content: flex-start;
-      margin-top: 5rem;
-      .project-info-description {
-        transform: translateX(82%);
-        z-index: -5;
-        transition: ease-in-out 0.5s;
-      }
-
-      .project-info-links,
-      .project-info-tech-list {
-        transform: translateX(-300%);
-        z-index: -5;
-        transition: ease-in-out 0.7s;
-      }
-    } */
     &-container {
       .project {
         &-image {
