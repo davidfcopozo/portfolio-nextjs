@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Projects() {
   const projectsData = [
     {
-      image: "/sound-scale.png",
+      image: "/sound-scale.PNG",
       projectName: "SoundScale",
       projectLink: "https://github.com/No-Country/s7-25-ft-desafioreactnative",
       projectDescription:
@@ -26,7 +26,7 @@ function Projects() {
       },
     },
     {
-      image: "/mascotapp.png",
+      image: "/mascotapp.PNG",
       projectName: "MascotApp",
       projectLink: "https://github.com/No-Country/C9-37-ReactNative",
       projectDescription:
@@ -44,7 +44,7 @@ function Projects() {
       },
     },
     {
-      image: "/rainbow-george.png",
+      image: "/rainbow-george.PNG",
       projectName: "Jorge García's Website",
       projectLink: "https://www.rainbowgeorge.es/",
       projectDescription:
@@ -56,7 +56,7 @@ function Projects() {
       },
     },
     {
-      image: "/transportesligeros-juank.png",
+      image: "/transportesligeros-juank.PNG",
       projectName: "Transportes Ligeros JuanK",
       projectLink: "https://www.transportesligeros.es/",
       projectDescription:
@@ -75,7 +75,7 @@ function Projects() {
       },
     },
     {
-      image: "/budget-buddy.png",
+      image: "/budget-buddy.PNG",
       projectName: "Budget Buddy",
       projectLink: "https://budget-buddy-d0db6.web.app/",
       projectDescription:
@@ -98,7 +98,7 @@ function Projects() {
       },
     },
     {
-      image: "/shortlify.png",
+      image: "/shortlify.PNG",
       projectName: "Shortlify",
       projectLink: "https://davidfcopozo.github.io/url-shortener-app/",
       projectDescription:
