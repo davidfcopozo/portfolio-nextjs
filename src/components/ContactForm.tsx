@@ -3,6 +3,18 @@ import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import TextError from "../components/TextError";
 import yupContactFormValidation from "@/helpers/yupContactFormValidation";
 
+interface Values {
+  name: string;
+  cel: number;
+  email?: string;
+  details?: string;
+}
+
+type SubmitFormProps = {
+  values: Values;
+  onSubmitProps: FormikHelpers<Values>;
+};
+
 const ContactForm = () => {
   const [data, setData] = useState("");
   const [success, setSuccess] = useState("");
@@ -10,13 +22,6 @@ const ContactForm = () => {
   const [fail, setFail] = useState("");
   const { contactFormInitialValues, contactFormValidationSchema } =
     yupContactFormValidation();
-
-  interface Values {
-    name: string;
-    cel: number;
-    email?: string;
-    details?: string;
-  }
 
   /*   const styles = {
     marginInline: "auto",
@@ -58,7 +63,7 @@ const ContactForm = () => {
   return (
     <>
       <Formik
-        initialValues={contactFormInitialValues as unknown as Values}
+        initialValues={contactFormInitialValues as Values}
         validationSchema={contactFormValidationSchema}
         validateOnMount
         key={458451151251220}

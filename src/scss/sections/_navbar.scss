@@ -1,5 +1,6 @@
 nav {
   min-height: 60px;
+
   .wrapper {
     width: 100%;
     display: flex;
@@ -63,6 +64,10 @@ nav {
           }
           &:hover {
             color: var(--theme-color);
+          }
+          .active {
+            color: #0070f3;
+            font-weight: bold;
           }
         }
       }

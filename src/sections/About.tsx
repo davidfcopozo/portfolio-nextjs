@@ -1,11 +1,10 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 
-function About() {
-  const ref = useRef(null);
+const About = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <motion.section
+    <motion.div
       className="about"
       id="about"
       initial="hidden"
@@ -16,7 +15,7 @@ function About() {
         visible: { opacity: 1, y: -50 },
         hidden: { opacity: 0, y: 0 },
       }}
-      data-scroll-spy
+      ref={ref}
     >
       <div className="title">
         <h2>About Me</h2>
@@ -34,31 +33,15 @@ function About() {
             research on HTML and CSS and I have been in love with web
             development ever since.
           </p>
-
-          {/*           <p className="about-grid-info-text">
-            Here are a few technologies I’ve been working with recently:
-          </p>
-          <ul className="about-grid-info-list">
-            <li className="about-grid-info-list-item">React</li>
-            <li className="about-grid-info-list-item">React Native</li>
-            <li className="about-grid-info-list-item">Next.js</li>
-            <li className="about-grid-info-list-item">Typescript</li>
-            <li className="about-grid-info-list-item">Redux Toolkit</li>
-            <li className="about-grid-info-list-item">Node.js</li>
-            <li className="about-grid-info-list-item">CSS</li>
-          </ul> */}
         </div>
         <div className="about-grid-photo">
-          {/* <div className="overlay"></div>
-          <div className="overlay-border"></div>
-        */}
           <div className="about-grid-photo-container">
             <Image src="/about-pic.jpg" alt="profile" fill />
           </div>
         </div>
       </div>
-    </motion.section>
+    </motion.div>
   );
-}
+});
 
 export default About;

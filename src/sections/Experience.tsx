@@ -1,7 +1,8 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-function Experience() {
+
+const Experience = forwardRef<HTMLDivElement>((props, ref) => {
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ function Experience() {
     },
   ];
   return (
-    <motion.section
+    <motion.div
       className="experience"
       id="experience"
       initial="hidden"
@@ -63,7 +64,7 @@ function Experience() {
         visible: { opacity: 1, y: -50 },
         hidden: { opacity: 0, y: 0 },
       }}
-      data-scroll-spy
+      ref={ref}
     >
       <div className="title">
         <h2>My Experience</h2>
@@ -111,8 +112,8 @@ function Experience() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </motion.div>
   );
-}
+});
 
 export default Experience;

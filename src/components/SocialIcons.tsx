@@ -8,9 +8,17 @@ import {
   FiMail,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { type } from "os";
+import { IconType } from "react-icons/lib";
+
+type SocialLinksType = {
+  name: string;
+  icon: JSX.Element;
+  link: string;
+};
 
 function SocialIcons() {
-  const socialLinks = [
+  const socialLinks: SocialLinksType[] = [
     {
       name: "Github",
       icon: <FiGithub />,

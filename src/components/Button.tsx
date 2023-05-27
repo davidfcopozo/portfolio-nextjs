@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-function Button({ text, link }: { text: string; link: string }) {
+type ButtonProps = { text: string; link: string };
+
+function Button({ text, link }: ButtonProps) {
   return (
     <Link className="btn" href={link}>
       {text}

@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
 function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
@@ -34,6 +35,7 @@ function Navbar() {
     nav?.addEventListener("click", (e) => {
       e.stopPropagation();
     });
+
     const html = document.querySelector("html");
     html?.addEventListener("click", (e) => {
       setResponsiveNavVisible(false);
@@ -60,7 +62,6 @@ function Navbar() {
             duration: 0.3,
             ease: "easeInOut",
           }}
-          data-scroll-spy
         >
           <Link href="davidfrancisco.dev">
             <Logo />
@@ -107,11 +108,7 @@ function Navbar() {
                   delay: 0.3 + index * 0.1,
                 }}
               >
-                <Link
-                  href={link}
-                  className="nav-items-list-item-link"
-                  data-scroll-spy
-                >
+                <Link href={link} className="nav-items-list-item-link">
                   {name}
                 </Link>
               </motion.li>

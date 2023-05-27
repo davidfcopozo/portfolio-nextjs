@@ -1,11 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { forwardRef } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-function Projects() {
-  const projectsData = [
+type ProjectDataType = {
+  image: string;
+  projectName: string;
+  projectLink: string;
+  projectDescription: string;
+  projectTech: string[];
+  projectExternalLinks: {
+    github: string;
+    externalLink: string;
+  };
+};
+
+const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+  const projectsData: ProjectDataType[] = [
     {
       image: "/sound-scale.PNG",
       projectName: "SoundScale",
@@ -118,7 +130,7 @@ function Projects() {
     },
   ];
   return (
-    <section className="projects" id="projects" data-scroll-spy>
+    <section className="projects" id="projects" ref={ref}>
       <motion.div
         className="title"
         initial="hidden"
@@ -213,6 +225,6 @@ function Projects() {
       </div>
     </section>
   );
-}
+});
 
 export default Projects;

@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Logo from "./Logo";
+import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-function Loader({ isLoading, setIsLoading }: any) {
+type LoaderProps = { isLoading: boolean; setIsLoading: () => void };
+
+function Loader({ isLoading, setIsLoading }: LoaderProps) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading();
     }, 1900);
   }, [setIsLoading]);
+
   return (
     <AnimatePresence>
       {isLoading && (

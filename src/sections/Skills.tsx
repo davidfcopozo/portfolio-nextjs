@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 import {
   SiBootstrap,
@@ -14,9 +14,9 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-const Skills = () => {
+const Skills = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <section id="skills" className="skills" data-scroll-spy>
+    <div id="skills" className="skills" ref={ref}>
       <motion.div
         initial="hidden"
         className="title"
@@ -30,7 +30,7 @@ const Skills = () => {
       >
         <h2>Skills</h2>
       </motion.div>
-      <div className="lang-wrapper-container" data-txtDark>
+      <div className="lang-wrapper-container">
         <div className="fa-html5 language-wrapper">
           <SiHtml5 className="fa-html5 language-icon" />
           <h3 className="lang-title">HTML</h3>
@@ -107,8 +107,8 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+});
 
 export default Skills;

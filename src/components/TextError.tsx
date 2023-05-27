@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import textErrorStyles from "../styles/components/TextError.module.scss";
 
 const TextError = (props: any) => {
