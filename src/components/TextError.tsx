@@ -1,10 +1,11 @@
 import React, { ReactNode } from "react";
-import textErrorStyles from "../styles/components/TextError.module.scss";
 
-const TextError = (props: any) => {
-  return (
-    <div className={`error ${textErrorStyles.textError}`}>{props.children}</div>
-  );
+type Props = {
+  children: ReactNode;
+};
+
+const TextError = ({ children }: Props) => {
+  return <div className={`error`}>{children}</div>;
 };
 
 export default TextError;
