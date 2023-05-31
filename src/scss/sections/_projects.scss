@@ -156,7 +156,7 @@
           }
         }
         .project-info-description {
-          transform: translateX(82%);
+          transform: translateX(182%);
           z-index: -5;
           transition: ease-in-out 0.5s;
         }
@@ -172,15 +172,19 @@
           .project-info {
             right: 0;
             left: initial;
+            transition: ease-in-out 0.7s;
           }
+          .project-info-title,
           .project-info-description,
           .project-info-tech-list,
           .project-info-links {
             transform: translateX(0);
             z-index: 6;
+            transition: ease-in-out 0.7s;
           }
           .project-image {
             z-index: 1;
+            transition: ease-in-out 0.7s;
           }
         }
       }
@@ -195,27 +199,29 @@
           z-index: -5;
           transition: ease-in-out 0.7s;
         }
+
         &:hover {
-          .project-info-links,
+          .project-info {
+            right: 0;
+            left: initial;
+            transition: ease-in-out 0.7s;
+          }
+
+          .project-info-title,
+          .project-info-description,
           .project-info-tech-list,
-          .project-info-description {
-            z-index: 5;
+          .project-info-links {
             transform: translateX(0);
+            z-index: 6;
+            transition: ease-in-out 0.7s;
           }
           .project-image {
             z-index: 1;
+            transition: ease-in-out 0.7s;
           }
         }
       }
 
-      &:hover {
-        .project-image-overlay {
-          background-color: #00000000;
-        }
-        img {
-          filter: none;
-        }
-      }
       &-overlay {
         transition: 0.3s ease-in-out;
         z-index: 1;
@@ -232,6 +238,39 @@
       }
     }
   }
+
+  @media screen and (min-width: 750px) {
+    &:nth-of-type(even) {
+      .project-info-description {
+        transform: translateX(130%);
+        z-index: -5;
+        transition: ease-in-out 0.5s;
+      }
+
+      .project-info-title,
+      .project-info-links,
+      .project-info-tech-list {
+        transform: translateX(-300%);
+        z-index: -5;
+        transition: ease-in-out 0.7s;
+      }
+    }
+
+    &:nth-of-type(odd) {
+      .project-info-description {
+        transform: translateX(130%);
+        z-index: -5;
+        transition: ease-in-out 0.5s;
+      }
+      .project-info-links,
+      .project-info-tech-list {
+        transform: translateX(200%);
+        z-index: -5;
+        transition: ease-in-out 0.7s;
+      }
+    }
+  }
+
   @media screen and (max-width: 1100px) {
     &-container {
       align-items: center;
