@@ -10,6 +10,8 @@
   --lightest-slate: #a8b2d1;
   --theme-color: #5596bf;
   --lang-icon-color: rgb(202, 202, 202);
+  --transition: ease-in-out 0.3s;
+  --grayFont: #919295;
 }
 
 ::-moz-selection {
