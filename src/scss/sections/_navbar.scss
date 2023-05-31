@@ -51,6 +51,7 @@ nav {
         display: flex;
         gap: 3rem;
         list-style-type: none;
+        align-items: center;
         &-item {
           a {
             outline: 2px dashed transparent;
