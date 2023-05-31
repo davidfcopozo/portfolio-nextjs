@@ -85,7 +85,10 @@ const ContactForm = () => {
                   placeholder="Type a message..."
                   required
                 />
-                <ErrorMessage name="details" component={TextError} />
+                <ErrorMessage
+                  name="details"
+                  render={(msg) => <TextError>{msg}</TextError>}
+                />
               </div>
 
               <button
