@@ -10,6 +10,9 @@ import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
+import { SuccessProvider } from "@/context/FormSuccessContext";
+import FormSuccess from "@/components/FormSuccess";
+
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
@@ -20,26 +23,29 @@ function Index() {
 
   return (
     <div className="app">
-      <Head>
-        <title>David Francisco</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      {showContent && (
-        <>
-          <Navbar />
-          <SocialIcons />
-          <main>
-            <Hero />
-            <Experience />
-            <Projects />
-            <Skills />
-            <About />
-            <Contact />
-          </main>
-          <Footer />
-        </>
-      )}
-      <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
+      <SuccessProvider>
+        <Head>
+          <title>David Francisco</title>
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Head>
+        {showContent && (
+          <>
+            <Navbar />
+            <SocialIcons />
+            <main>
+              <Hero />
+              <Experience />
+              <Projects />
+              <Skills />
+              <About />
+              <Contact />
+            </main>
+            <Footer />
+            <FormSuccess />
+          </>
+        )}
+        <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
+      </SuccessProvider>
     </div>
   );
 }
