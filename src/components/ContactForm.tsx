@@ -55,7 +55,9 @@ const ContactForm = () => {
                   placeholder="Jon Doe"
                   required
                 />
-                <ErrorMessage name="name" component={TextError} />
+                <>
+                  <ErrorMessage name="name" component={TextError} />
+                </>
               </div>
 
               <div className="email">
@@ -70,7 +72,9 @@ const ContactForm = () => {
                   placeholder="email@example.com"
                   required
                 />
-                <ErrorMessage name="email" component={TextError} />
+                <>
+                  <ErrorMessage name="email" component={TextError} />
+                </>
               </div>
 
               <div className="details">
@@ -85,7 +89,9 @@ const ContactForm = () => {
                   placeholder="Type a message..."
                   required
                 />
-                <ErrorMessage name="details" component={TextError} />
+                <>
+                  <ErrorMessage name="details" component={TextError} />
+                </>
               </div>
 
               <button
