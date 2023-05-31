@@ -14,6 +14,7 @@ const LoadingIndicator = ({ w, h, c }: Props) => {
       viewBox="0 0 45 45"
       xmlns="http://www.w3.org/2000/svg"
       stroke={`${c ? c : "#5596bf"}`}
+      className="loading-indicator"
     >
       <g
         fill="none"
