@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const About = forwardRef<HTMLDivElement>((props, ref) => {
+const About = () => {
   return (
     <motion.div
       className="about"
@@ -15,7 +15,6 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
         visible: { opacity: 1, y: -50 },
         hidden: { opacity: 0, y: 0 },
       }}
-      ref={ref}
     >
       <div className="title">
         <h2>About Me</h2>
@@ -42,6 +41,6 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </motion.div>
   );
-});
+};
 
 export default About;
