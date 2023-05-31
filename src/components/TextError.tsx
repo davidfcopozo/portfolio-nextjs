@@ -4,7 +4,7 @@ type Props = {
   children: ReactNode;
 };
 
-const TextError = ({ children }: Props) => {
+const TextError = ({ children }: Props): ReturnType<any> => {
   return <div className={`error`}>{children}</div>;
 };
 
