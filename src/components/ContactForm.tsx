@@ -104,7 +104,7 @@ const ContactForm = () => {
               >
                 Send
               </button>
-              {formik.isSubmitting && <LoadingIndicator />}
+              {formik.isSubmitting && <LoadingIndicator w="100" h="100" />}
             </Form>
           );
         }}
