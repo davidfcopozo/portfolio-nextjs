@@ -16,7 +16,7 @@ type ProjectDataType = {
   };
 };
 
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = () => {
   const projectsData: ProjectDataType[] = [
     {
       image: "/sound-scale.PNG",
@@ -130,7 +130,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     },
   ];
   return (
-    <section className="projects" id="projects" ref={ref}>
+    <section className="projects" id="projects">
       <motion.div
         className="title"
         initial="hidden"
@@ -225,6 +225,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Projects;

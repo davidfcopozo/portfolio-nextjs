@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { forwardRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const Experience = forwardRef<HTMLDivElement>((props, ref) => {
+const Experience = () => {
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
@@ -64,7 +64,6 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
         visible: { opacity: 1, y: -50 },
         hidden: { opacity: 0, y: 0 },
       }}
-      ref={ref}
     >
       <div className="title">
         <h2>My Experience</h2>
@@ -114,6 +113,6 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </motion.div>
   );
-});
+}
 
 export default Experience;
