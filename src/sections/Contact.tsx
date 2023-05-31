@@ -1,8 +1,9 @@
 import Button from "@/components/Button";
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
+import ContactForm from "@/components/ContactForm";
 
-const Contact = forwardRef<HTMLDivElement>((props, ref) => {
+const Contact = () => {
   return (
     <motion.div
       className="contact"
@@ -15,7 +16,6 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
         visible: { opacity: 1, y: -50 },
         hidden: { opacity: 0, y: 0 },
       }}
-      ref={ref}
     >
       <h2 className="contact-title">Let&apos;s talk!</h2>
       <h2 className="contact-sub-title">Get In Touch</h2>
@@ -23,8 +23,12 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
       <div className="contact-cta">
         <Button link="mailto:davidfco.pozo@gmail.com" text="Send E-Mail" />
       </div>
+      <p className="contact-form-text">
+        Alternatively, you can also drop-in an E-mail here!
+      </p>
+      <ContactForm />
     </motion.div>
   );
-});
+};
 
 export default Contact;

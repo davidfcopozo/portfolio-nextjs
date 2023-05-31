@@ -17,7 +17,8 @@
     font-family: var(--raleway);
     color: var(--light-slate);
   }
-  .contact-text {
+  .contact-text,
+  .contact-form-text {
     color: var(--slate);
     font-size: var(--tlarge);
     letter-spacing: 0.07rem;
@@ -25,6 +26,9 @@
     font-weight: 500;
     font-family: var(--raleway);
     text-align: center;
+  }
+  .contact-form-text {
+    padding: 2em;
   }
   .contact-cta {
     margin-top: 1rem;

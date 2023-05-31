@@ -14,9 +14,9 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+const Skills = () => {
   return (
-    <div id="skills" className="skills" ref={ref}>
+    <div id="skills" className="skills">
       <motion.div
         initial="hidden"
         className="title"
@@ -109,6 +109,6 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default Skills;
