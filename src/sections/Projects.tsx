@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { forwardRef } from "react";
+import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -151,7 +151,6 @@ const Projects = () => {
               {
                 image,
                 projectDescription,
-                projectLink,
                 projectExternalLinks,
                 projectName,
                 projectTech,
@@ -201,6 +200,7 @@ const Projects = () => {
                           <Link
                             href={projectExternalLinks.github}
                             className="project-info-links-item-link"
+                            target="_blank"
                           >
                             <FiGithub />
                           </Link>
@@ -211,6 +211,7 @@ const Projects = () => {
                           <Link
                             href={projectExternalLinks.externalLink}
                             className="project-info-links-item-link"
+                            target="_blank"
                           >
                             <FiExternalLink />
                           </Link>
