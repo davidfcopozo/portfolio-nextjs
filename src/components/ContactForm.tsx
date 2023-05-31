@@ -55,7 +55,10 @@ const ContactForm = () => {
                   placeholder="Jon Doe"
                   required
                 />
-                <ErrorMessage name="name" component={TextError} />
+                <ErrorMessage
+                  name="name"
+                  render={(msg) => <TextError>{msg}</TextError>}
+                />
               </div>
 
               <div className="email">
@@ -70,7 +73,10 @@ const ContactForm = () => {
                   placeholder="email@example.com"
                   required
                 />
-                <ErrorMessage name="email" component={TextError} />
+                <ErrorMessage
+                  name="email"
+                  render={(msg) => <TextError>{msg}</TextError>}
+                />
               </div>
 
               <div className="details">
