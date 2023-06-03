@@ -1,0 +1,39 @@
+[
+  {
+    "name": "No Country",
+    "role": "Frontend Developer",
+    "url": "https://www.nocountry.tech/",
+    "start": "January 2023",
+    "end": "April 2023",
+    "shortDescription": [
+      "As a Frontend Developer at No Country, I worked with a team of developers, designers and project managers to build two Mobile Apps as part of their job environment simulation.",
+      "Throughout the time of the internship, I had the opportunity to work with various technologies, including React Native, Redux Toolkit, Nativewind, Node.js, Sequelize, Firebase, Jira, Trello among others.",
+      "I also had the opportunity to design one of the apps with Miro and Figma.",
+      "Additionally, I was in charge of setting up the project structure and boilerplate code for one of the projects."
+    ]
+  },
+  {
+    "name": "Jorge García",
+    "role": "Frontend Developer (Freelance)",
+    "url": "https://rainbowgeorge.es/",
+    "start": "April 2023",
+    "end": "April 2023",
+    "shortDescription": [
+      "I worked closely with Jorge to understand his specific needs and preferences and I was able to incorporate his feedback into picking the most convenient theme.",
+      "I was responsible for was changing the Elementor Wordpress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently."
+    ]
+  },
+  {
+    "name": "TL JuanK",
+    "role": "Frontend Developer (Freelance)",
+    "url": "https://transportesligerosjuank.es",
+    "start": "February 2023",
+    "end": "February 2023",
+    "shortDescription": [
+      "I designed and built a website that effectively showcased the services offered by Transportes Ligeros JuanK.",
+      "For the designed and built of the website I used a variety of technologies, including NextJs, Javascript, Framer Motion, SASS Formik and Yup.",
+      "I drew on my experience as a Front Developer to ensure that the website was optimized for performance, SEO and speed.",
+      "I also utilized my strong communication skills to keep the client informed and engaged throughout the development process."
+    ]
+  }
+]
