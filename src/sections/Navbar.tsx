@@ -15,7 +15,6 @@ function Navbar() {
     window.addEventListener("scroll", () => {
       window.scrollY > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
     });
-    console.log(JSON.stringify(sectionLinks));
   }, []);
 
   useEffect(() => {
