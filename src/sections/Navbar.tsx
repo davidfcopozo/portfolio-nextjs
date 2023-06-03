@@ -3,27 +3,19 @@ import Logo from "@/components/Logo";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
+import sectionLinks from "@/data/sectionLinks.json";
 
 function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
-  const sectionLinks = [
-    { name: "Experience", link: "/#experience" },
-    { name: "Projects", link: "/#projects" },
-    { name: "Skills", link: "/#skills" },
-    { name: "About", link: "/#about" },
-    {
-      name: "Contact",
-      link: "/#contact",
-    },
-  ];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
     });
+    console.log(JSON.stringify(sectionLinks));
   }, []);
 
   useEffect(() => {
