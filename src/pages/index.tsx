@@ -12,6 +12,7 @@ import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
 import { SuccessProvider } from "@/context/FormSuccessContext";
 import FormSuccess from "@/components/FormSuccess";
+import Script from "next/script";
 
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +47,17 @@ function Index() {
         )}
         <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
       </SuccessProvider>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-58NQPEXMLK"
+      />
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-58NQPEXMLK');`}
+      </Script>
     </div>
   );
 }
