@@ -117,7 +117,7 @@ function Navbar() {
           >
             <Button
               text="Resume"
-              link="https://drive.google.com/file/d/1iA4WI9Sl_64bJ2n6T-71q8cfBgH1vXSz/view?usp=sharing"
+              link="https://docs.google.com/document/d/1A3CU5NRgKrYcM9pcLLfDJmKNeap2iNfB/edit?usp=sharing&ouid=113705533080716991628&rtpof=true&sd=true"
               target="_blank"
             />
           </motion.div>
