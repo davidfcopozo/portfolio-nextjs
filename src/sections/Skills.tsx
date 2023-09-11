@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   SiBootstrap,
@@ -43,7 +43,7 @@ const Skills = () => {
 
         <div className="fa-js language-wrapper">
           <SiJavascript className="fa-js language-icon" />
-          <h3 className="lang-title">JavaScritp</h3>
+          <h3 className="lang-title">Javascript</h3>
         </div>
 
         <div className="fa-sass language-wrapper">

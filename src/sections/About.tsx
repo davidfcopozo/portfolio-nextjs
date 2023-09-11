@@ -22,8 +22,8 @@ const About = () => {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            My name is David, I am a frontend developer with a passion to learn
-            and build things that live on the internet.
+            My name is David, I am a frontend developer with a passion for
+            learning and building things that live on the internet.
           </p>
           <p className="about-grid-info-text">
             I discovered my passion for web development when I was forced to fix

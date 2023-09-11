@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import experiences from "@/data/experiences.json";
 

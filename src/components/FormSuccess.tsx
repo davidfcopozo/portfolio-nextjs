@@ -80,7 +80,7 @@ const FormSuccess = () => {
         <h2>{open ? "Thank you!" : "Sorry!"}</h2>
         <p>
           {open
-            ? `Your message had been sent successfully. I will get back to you as soon as possible.`
+            ? `Your message has been sent successfully. I will get back to you as soon as possible.`
             : "Something went wrong. Please try again"}
         </p>
         <motion.button

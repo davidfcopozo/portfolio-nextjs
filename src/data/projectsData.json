@@ -3,7 +3,7 @@
     "image": "/sound-scale.PNG",
     "projectName": "SoundScale",
     "projectLink": "https://github.com/No-Country/s7-25-ft-desafioreactnative",
-    "projectDescription": "React Native Full-stack project in which I was in charge of the Project&apos;s structure, Music Player with Expo-AV, Navigation structure with React Navigation, Global state setup with Redux Toolkit, created a release version of the app that could be shared with users , among other features.",
+    "projectDescription": "React Native Full-stack project in which I was in charge of the Project&apos;s structure, Music Player with Expo-AV, Navigation structure with React Navigation, Global state setup with Redux Toolkit, created a release version of the app that could be shared with users, among other features.",
     "projectTech": [
       "React Native",
       "Redux Toolkit",
@@ -38,7 +38,7 @@
     "image": "/rainbow-george.PNG",
     "projectName": "Jorge García's Website",
     "projectLink": "https://www.rainbowgeorge.es/",
-    "projectDescription": "I changed  the Elementor Wordpress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently.",
+    "projectDescription": "I changed the Elementor WordPress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently.",
     "projectTech": ["Wordpress", "Dreamy Portfolio Theme", "Custom CSS"],
     "projectExternalLinks": {
       "github": "",
@@ -67,7 +67,7 @@
     "image": "/budget-buddy.PNG",
     "projectName": "Budget Buddy",
     "projectLink": "https://budget-buddy-d0db6.web.app/",
-    "projectDescription": "A Front-end App YouTube challenge that I tweaked by adding additional features like: backend, responsiveness, Multilingual & dark theme feature.",
+    "projectDescription": "A Front-end App YouTube challenge that I tweaked by adding additional features like backend, responsiveness, Multilingual & dark theme feature.",
     "projectTech": [
       "React Js",
       "Javascript",
