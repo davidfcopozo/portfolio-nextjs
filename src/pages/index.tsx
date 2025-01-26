@@ -4,7 +4,7 @@ import SocialIcons from "@/components/SocialIcons";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import Navbar from "@/sections/Navbar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
@@ -13,17 +13,25 @@ import Skills from "@/sections/Skills";
 import { SuccessProvider } from "@/context/FormSuccessContext";
 import FormSuccess from "@/components/FormSuccess";
 import Script from "next/script";
-
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
-  const handleLoaderLoaded = () => {
-    setIsLoading(false);
-    setTimeout(() => setShowContent(true), 450);
-  };
 
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (hasVisited) {
+      setShowContent(true);
+      setIsLoading(false);
+    } else {
+      localStorage.setItem("hasVisited", "true");
+      setTimeout(() => {
+        setIsLoading(false);
+        setShowContent(true);
+      }, 1900);
+    }
+  }, []);
   return (
-    <div className="app">
+    <div className={`app`}>
       <SuccessProvider>
         <Head>
           <title>David Francisco</title>
@@ -31,6 +39,9 @@ function Index() {
         </Head>
         {showContent && (
           <>
+            <button onClick={() => localStorage.removeItem("hasVisited")}>
+              Reset First Visit
+            </button>
             <Navbar />
             <SocialIcons />
             <main>
@@ -45,7 +56,7 @@ function Index() {
             <FormSuccess />
           </>
         )}
-        <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
+        <Loader isLoading={isLoading} setIsLoading={() => {}} />
       </SuccessProvider>
       <Script
         async
@@ -53,13 +64,11 @@ function Index() {
       />
       <Script id="google-analytics">
         {`window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-58NQPEXMLK');`}
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-58NQPEXMLK');`}
       </Script>
     </div>
   );
 }
-
 export default Index;
