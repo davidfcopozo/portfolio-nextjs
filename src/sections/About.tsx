@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { forwardRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const About = () => {
