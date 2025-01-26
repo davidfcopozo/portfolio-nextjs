@@ -1,15 +1,8 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
 type LoaderProps = { isLoading: boolean; setIsLoading: () => void };
 
-function Loader({ isLoading, setIsLoading }: LoaderProps): ReactElement {
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading();
-    }, 1900);
-  }, [setIsLoading]);
-
+function Loader({ isLoading }: LoaderProps): ReactElement {
   return (
     <AnimatePresence>
       {isLoading && (
@@ -73,5 +66,4 @@ function Loader({ isLoading, setIsLoading }: LoaderProps): ReactElement {
     </AnimatePresence>
   );
 }
-
 export default Loader;
