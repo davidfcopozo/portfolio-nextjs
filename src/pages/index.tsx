@@ -59,9 +59,6 @@ function Index() {
         </Head>
         {showContent && (
           <>
-            <button onClick={() => localStorage.removeItem("hasVisited")}>
-              Reset First Visit
-            </button>
             <Navbar activeSection={activeSection} />
             <SocialIcons />
             <main>
