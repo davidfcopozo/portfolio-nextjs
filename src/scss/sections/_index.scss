@@ -1,9 +1,9 @@
-@import "main";
-@import "navbar";
-@import "hero";
-@import "about";
-@import "expereince";
-@import "projects";
-@import "contact";
-@import "footer";
-@import "skills";
+@use "main" as main;
+@use "navbar" as navbar;
+@use "hero" as hero;
+@use "about" as about;
+@use "expereince" as expereince;
+@use "projects" as projects;
+@use "contact" as contact;
+@use "footer" as footer;
+@use "skills" as skills;

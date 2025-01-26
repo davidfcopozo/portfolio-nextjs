@@ -1,8 +1,8 @@
-@import "social-icons";
-@import "button";
-@import "link";
-@import "loader";
-@import "contact-form";
-@import "text-error";
-@import "form-success";
-@import "loading-indicator";
+@use "social-icons" as social-icons;
+@use "button" as button;
+@use "link" as link;
+@use "loader" as loader;
+@use "contact-form" as contact-form;
+@use "text-error" as text-error;
+@use "form-success" as form-success;
+@use "loading-indicator" as loading-indicator;

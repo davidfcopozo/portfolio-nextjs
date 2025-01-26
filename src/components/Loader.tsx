@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { ReactElement, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type LoaderProps = { isLoading: boolean; setIsLoading: () => void };
 
-function Loader({ isLoading, setIsLoading }: LoaderProps) {
+function Loader({ isLoading, setIsLoading }: LoaderProps): ReactElement {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading();
