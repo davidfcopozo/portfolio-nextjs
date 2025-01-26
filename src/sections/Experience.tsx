@@ -15,7 +15,7 @@ const Experience = () => {
   }, [selected]);
 
   return (
-    <motion.div
+    <motion.section
       className="experience"
       id="experience"
       initial="hidden"
@@ -73,7 +73,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

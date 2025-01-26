@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
-    <motion.div
+    <motion.section
       className="contact"
       id="contact"
       initial="hidden"
@@ -27,7 +27,7 @@ const Contact = () => {
         Alternatively, you can also drop-in an E-mail here!
       </p>
       <ContactForm />
-    </motion.div>
+    </motion.section>
   );
 };
 

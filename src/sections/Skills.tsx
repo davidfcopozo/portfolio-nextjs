@@ -17,7 +17,7 @@ import { TbFileTypeSql } from "react-icons/tb";
 
 const Skills = () => {
   return (
-    <div id="skills" className="skills">
+    <section id="skills" className="skills">
       <motion.div
         initial="hidden"
         className="title"
@@ -108,7 +108,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

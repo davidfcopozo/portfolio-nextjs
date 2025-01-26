@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
+    <motion.section
       className="about"
       id="about"
       initial="hidden"
@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 
