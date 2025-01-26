@@ -16,6 +16,15 @@ import Script from "next/script";
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const sections = [
+    { id: "experience", Component: Experience },
+    { id: "projects", Component: Projects },
+    { id: "skills", Component: Skills },
+    { id: "about", Component: About },
+    { id: "contact", Component: Contact },
+  ];
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("hasVisited");
@@ -42,15 +51,13 @@ function Index() {
             <button onClick={() => localStorage.removeItem("hasVisited")}>
               Reset First Visit
             </button>
-            <Navbar />
+            <Navbar activeSection={activeSection} />
             <SocialIcons />
             <main>
               <Hero />
-              <Experience />
-              <Projects />
-              <Skills />
-              <About />
-              <Contact />
+              {sections.map(({ id, Component }) => (
+                <Component key={id} id={id} onVisible={setActiveSection} />
+              ))}
             </main>
             <Footer />
             <FormSuccess />
