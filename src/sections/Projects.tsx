@@ -55,7 +55,6 @@ const Projects = () => {
                         fill
                         alt={projectName}
                         quality={100}
-                        style={{ borderRadius: "5px" }}
                       />
                     </div>
                   </div>
