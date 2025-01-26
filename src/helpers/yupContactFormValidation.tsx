@@ -8,7 +8,7 @@ const yupContactFormValidation = () => {
   };
 
   const contactFormValidationSchema = Yup.object({
-    name: Yup.string(),
+    name: Yup.string().required("This field is required."),
     email: Yup.string()
       .email("Invalid email address.")
       .required("This field is required."),

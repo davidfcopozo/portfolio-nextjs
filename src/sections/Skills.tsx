@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   SiBootstrap,
@@ -11,13 +11,35 @@ import {
   SiReactquery,
   SiRedux,
   SiSass,
-  SiTypescript,
+  SiPhp,
+  SiMongodb,
+  SiTailwindcss,
 } from "react-icons/si";
+import { TbFileTypeSql } from "react-icons/tb";
+import { BiLogoFirebase } from "react-icons/bi";
+import { useInView } from "react-intersection-observer";
 
-const Skills = () => {
+const Skills = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
+
   return (
-    <div id="skills" className="skills">
+    <section id={id} className="skills">
       <motion.div
+        ref={ref}
         initial="hidden"
         className="title"
         whileInView="visible"
@@ -80,6 +102,26 @@ const Skills = () => {
           <SiReactquery className="fa-fan language-icon" />
           <h3 className="lang-title">React Query</h3>
         </div>
+
+        <div className="language-wrapper">
+          <SiNodedotjs className="node-js language-icon" />
+          <h3 className="lang-title">Node.js</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <SiTailwindcss className="tailwind-css language-icon" />
+          <h3 className="lang-title">Tailwind CSS</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <BiLogoFirebase className="firebase language-icon" />
+          <h3 className="lang-title">Firebase</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <SiMongodb className="mongo-db language-icon" />
+          <h3 className="lang-title">MongoDB</h3>
+        </div>
       </div>
 
       <div className="learning-skills">
@@ -97,17 +139,17 @@ const Skills = () => {
         </motion.div>
         <div className="learning-wrapper">
           <div className="language-wrapper">
-            <SiTypescript className="typescript language-icon" />
-            <h3 className="lang-title">Typescript</h3>
+            <TbFileTypeSql className="typescript language-icon" />
+            <h3 className="lang-title">SQL</h3>
           </div>
 
           <div className="language-wrapper">
-            <SiNodedotjs className="fa-node-js language-icon" />
-            <h3 className="lang-title">Node JS</h3>
+            <SiPhp className="php language-icon" />
+            <h3 className="lang-title">PHP</h3>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

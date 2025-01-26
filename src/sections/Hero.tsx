@@ -77,13 +77,16 @@ function Hero() {
         }}
       >
         <Image
-          src="/profile-pic.png"
+          src="/profile-pic.webp"
           alt="Picture of David Francisco"
           style={{
             objectFit: "cover",
           }}
           width={400}
           height={400}
+          loading="eager"
+          priority
+          fetchPriority="high"
         />
       </motion.div>
     </section>

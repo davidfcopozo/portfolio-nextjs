@@ -5,7 +5,8 @@
   border: 1px solid var(--theme-color);
   border-radius: 4px;
   background-color: transparent;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-family: "SF Mono", var(--fira-code), "Fira Mono", "Roboto Mono",
+    monospace;
   font-size: var(--tsm);
   outline: none;
   &:hover,

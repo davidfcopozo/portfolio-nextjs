@@ -7,7 +7,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import sectionLinks from "@/data/sectionLinks.json";
 
-function Navbar() {
+function Navbar({ activeSection }: { activeSection: string }) {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
 
@@ -99,7 +99,12 @@ function Navbar() {
                   delay: 0.3 + index * 0.1,
                 }}
               >
-                <Link href={link} className="nav-items-list-item-link">
+                <Link
+                  href={link}
+                  className={`nav-items-list-item-link ${
+                    activeSection === name.toLocaleLowerCase() ? "active" : ""
+                  }`}
+                >
                   {name}
                 </Link>
               </motion.li>

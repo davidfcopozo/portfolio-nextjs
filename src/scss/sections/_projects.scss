@@ -1,5 +1,5 @@
 .projects {
-  margin: 15rem 0;
+  margin: 8rem 0;
   overflow: hidden;
 
   .title {
@@ -39,6 +39,8 @@
           width: 600px;
           height: 300px;
           z-index: 6;
+          border-radius: 5px;
+          overflow: hidden;
         }
         & {
           position: absolute;
@@ -62,11 +64,13 @@
           height: 100%;
           background-color: var(--theme-color);
           opacity: 0.4;
+          border-radius: 5px;
         }
         img {
           z-index: 0;
           filter: grayscale(100%);
           transition: 0.3s ease-in-out;
+          border-radius: 5px;
         }
       }
       &-info {
@@ -85,7 +89,7 @@
           color: var(--theme-color);
           font-size: var(--txlarge);
           font-family: var(--raleway);
-          transform: translateX(-200%);
+          transform: translateX(-210%);
           cursor: pointer;
           transition: 0.3s ease-in-out;
           &:hover {
@@ -183,6 +187,7 @@
           .project-info-tech-list,
           .project-info-links {
             transform: translateX(0);
+            opacity: 1;
             z-index: 6;
             transition: ease-in-out 0.7s;
           }
@@ -199,7 +204,7 @@
 
         .project-info-links,
         .project-info-tech-list {
-          transform: translateX(350%);
+          transform: translateX(200%);
           z-index: -5;
           transition: ease-in-out 0.7s;
         }
@@ -216,6 +221,7 @@
           .project-info-tech-list,
           .project-info-links {
             transform: translateX(0);
+            opacity: 1;
             z-index: 6;
             transition: ease-in-out 0.7s;
           }
@@ -239,7 +245,7 @@
       .project-info-title,
       .project-info-links,
       .project-info-tech-list {
-        transform: translateX(-350%);
+        transform: translateX(-220%);
         z-index: -5;
         transition: ease-in-out 0.7s;
       }
@@ -247,14 +253,15 @@
 
     &:nth-of-type(odd) {
       .project-info-description {
-        transform: translateX(130%);
+        transform: translateX(200%);
         z-index: -5;
         transition: ease-in-out 0.5s;
       }
       .project-info-title,
       .project-info-links,
       .project-info-tech-list {
-        transform: translateX(200%);
+        transform: translateX(270%);
+        opacity: 0;
         z-index: -5;
         transition: ease-in-out 0.7s;
       }

@@ -1,13 +1,30 @@
 import Button from "@/components/Button";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
+import { useInView } from "react-intersection-observer";
 
-const Contact = () => {
+const Contact = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
   return (
-    <motion.div
+    <motion.section
+      ref={ref}
       className="contact"
-      id="contact"
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -27,7 +44,7 @@ const Contact = () => {
         Alternatively, you can also drop-in an E-mail here!
       </p>
       <ContactForm />
-    </motion.div>
+    </motion.section>
   );
 };
 

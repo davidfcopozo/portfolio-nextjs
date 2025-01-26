@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
-
 .success-container {
   display: none;
   position: sticky;
@@ -21,7 +19,8 @@
   bottom: 0;
   right: 0;
   left: 0;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-family: "SF Mono", var(--fira-code), "Fira Mono", "Roboto Mono",
+    monospace;
 
   .message-box {
     display: -webkit-box;

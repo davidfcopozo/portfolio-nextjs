@@ -11,13 +11,35 @@
   row-gap: 1.3em;
   padding: 1.5rem;
 
-  /* From https://css.glass */
-  background: rgba(10, 25, 47, 0.9);
+  background: linear-gradient(#0a192f, #0a192f) padding-box,
+    linear-gradient(145deg, transparent 35%, var(--light-slate), #0a192f)
+      border-box;
+  border: 2px solid transparent;
+  padding: 6rem 2rem;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(85, 150, 191, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  //border: 1px solid rgba(255, 255, 255, 0.3);
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
   @media (min-width: 1024px) {
     & {
@@ -126,22 +148,11 @@
   #email,
   #details {
     height: 3em;
-    border: none;
-    border-bottom: solid 1px var(--theme-color);
     border-radius: 5px;
     width: 100%;
-
-    &:focus,
-    &:valid {
-      outline: 0;
-      border-bottom-color: #25d366;
-    }
-
-    &:focus,
-    &:invalid {
-      outline: 0;
-      border-bottom-color: #ed4337;
-    }
+    transition: border-bottom-color 0.3s ease;
+    border: 1px var(--light-slate) solid;
+    outline: none;
 
     @media (min-width: 1024px) {
       #name,
@@ -155,8 +166,8 @@
   #details {
     border-radius: 5px;
     height: auto;
-    border: none;
-    border-bottom: solid 1px var(--slate);
+    border: 1px var(--light-slate) solid;
+    outline: none;
   }
 
   &-input-label {
@@ -176,15 +187,32 @@
   }
 
   &-input-field {
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
-    border-bottom: 2px solid #eee;
-    z-index: 1;
-    background-color: transparent;
-    outline: none;
-    font-size: clamp(1rem, 4vw, 2rem);
     padding: 0.8rem 0;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid rgb(48, 45, 45);
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    transition: 0.1s;
+
+    &.invalid {
+      border-color: #ed4337 !important;
+    }
+
+    &.valid {
+      border-color: #25d366 !important;
+    }
+
+    &:focus {
+      border: 1px rgb(0, 136, 255) solid !important;
+      outline: none;
+      &::placeholder {
+        color: rgb(0, 136, 255);
+      }
+    }
 
     @media (min-width: 900px) {
       font-size: clamp(0.5em, 3vw, 1em);
@@ -192,22 +220,19 @@
   }
 
   .action-btn {
-    font-size: 1.1rem;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    top: 60px;
+    padding: 7px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
     margin-top: 2em;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--lang-icon-color);
-    font-weight: 900;
-    background-color: var(--slate);
-    padding: 0.75em 2em;
-    border-radius: 10px;
-    text-align: center;
-    border: none;
     outline: none;
-    margin-top: 0.2rem;
-    cursor: pointer;
-    max-width: 50%;
-    margin-inline: auto;
+    border: none;
 
     @media (min-width: 1024px) {
       & {

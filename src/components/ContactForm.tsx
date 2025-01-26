@@ -28,7 +28,9 @@ const ContactForm = () => {
       <Formik
         initialValues={contactFormInitialValues as Values}
         validationSchema={contactFormValidationSchema}
-        validateOnMount
+        validateOnMount={false}
+        validateOnBlur
+        validateOnChange
         key={458451151251220}
         onSubmit={submitForm}
       >
@@ -48,7 +50,11 @@ const ContactForm = () => {
                   Name:
                 </label>
                 <Field
-                  className="form-input-field"
+                  className={`form-input-field ${
+                    formik.touched.name && formik.errors.name ? "invalid" : ""
+                  } ${
+                    formik.touched.name && !formik.errors.name ? "valid" : ""
+                  }`}
                   type="text"
                   name="name"
                   id="name"
@@ -66,7 +72,11 @@ const ContactForm = () => {
                   E-Mail:
                 </label>
                 <Field
-                  className="form-input-field"
+                  className={`form-input-field ${
+                    formik.touched.email && formik.errors.email ? "invalid" : ""
+                  } ${
+                    formik.touched.name && !formik.errors.email ? "valid" : ""
+                  }`}
                   type="email"
                   name="email"
                   id="email"
@@ -84,12 +94,19 @@ const ContactForm = () => {
                   Details:
                 </label>
                 <Field
-                  className="form-input-field"
+                  className={`form-input-field ${
+                    formik.touched.details && formik.errors.details
+                      ? "invalid"
+                      : ""
+                  } ${
+                    formik.touched.name && !formik.errors.details ? "valid" : ""
+                  }`}
                   as="textarea"
                   name="details"
                   id="details"
                   placeholder="Type a message..."
                   required
+                  rows="5"
                 />
                 <ErrorMessage
                   name="details"
@@ -104,10 +121,10 @@ const ContactForm = () => {
                 disabled={!formik.isValid || formik.isSubmitting ? true : false}
                 style={{
                   backgroundColor:
-                    !formik.isValid || formik.isSubmitting ? "gray" : "#5596bf",
+                    !formik.isValid || formik.isSubmitting ? "white" : "",
                   color:
                     !formik.isValid || formik.isSubmitting
-                      ? "white"
+                      ? "black"
                       : "#0a192f",
                 }}
               >
