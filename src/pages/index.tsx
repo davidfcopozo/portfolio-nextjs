@@ -39,6 +39,17 @@ function Index() {
       }, 1900);
     }
   }, []);
+
+  useEffect(() => {
+    if (window.location.hash && showContent) {
+      const id = window.location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [showContent]);
+
   return (
     <div className={`app`}>
       <SuccessProvider>
