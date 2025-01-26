@@ -1,6 +1,6 @@
 [
   {
-    "image": "/sound-scale.PNG",
+    "image": "/sound-scale.webp",
     "projectName": "SoundScale",
     "projectLink": "https://github.com/No-Country/s7-25-ft-desafioreactnative",
     "projectDescription": "React Native Full-stack project in which I was in charge of the Project&apos;s structure, Music Player with Expo-AV, Navigation structure with React Navigation, Global state setup with Redux Toolkit, created a release version of the app that could be shared with users, among other features.",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "image": "/mascotapp.PNG",
+    "image": "/mascotapp.webp",
     "projectName": "MascotApp",
     "projectLink": "https://github.com/No-Country/C9-37-ReactNative",
     "projectDescription": "React Native Full-stack project in which I was in charge of the App design, chat & Sign In/Up implementation with Firebase, reset password website, among other features.",
@@ -35,7 +35,7 @@
     }
   },
   {
-    "image": "/rainbow-george.PNG",
+    "image": "/rainbow-george.webp",
     "projectName": "Jorge García's Website",
     "projectLink": "https://www.rainbowgeorge.es/",
     "projectDescription": "I changed the Elementor WordPress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently.",
@@ -46,7 +46,7 @@
     }
   },
   {
-    "image": "/transportesligeros-juank.PNG",
+    "image": "/transportesligeros-juank.webp",
     "projectName": "Transportes Ligeros JuanK",
     "projectLink": "https://www.transportesligeros.es/",
     "projectDescription": "Moving company website designed and built to boost conversion rate by having multiple call-to-action buttons without being too aggressive.",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "image": "/budget-buddy.PNG",
+    "image": "/budget-buddy.webp",
     "projectName": "Budget Buddy",
     "projectLink": "https://budget-buddy-d0db6.web.app/",
     "projectDescription": "A Front-end App YouTube challenge that I tweaked by adding additional features like backend, responsiveness, Multilingual & dark theme feature.",
@@ -86,7 +86,7 @@
     }
   },
   {
-    "image": "/shortlify.PNG",
+    "image": "/shortlify.webp",
     "projectName": "Shortlify",
     "projectLink": "https://davidfcopozo.github.io/url-shortener-app/",
     "projectDescription": "This is a functional Frontend Mentor's Link Shortener Landing Page challenge with a difficulty of Intermediate.",
