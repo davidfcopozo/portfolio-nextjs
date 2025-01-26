@@ -12,8 +12,11 @@ import {
   SiRedux,
   SiSass,
   SiPhp,
+  SiMongodb,
+  SiTailwindcss,
 } from "react-icons/si";
 import { TbFileTypeSql } from "react-icons/tb";
+import { BiLogoFirebase } from "react-icons/bi";
 import { useInView } from "react-intersection-observer";
 
 const Skills = ({
@@ -98,6 +101,26 @@ const Skills = ({
         <div className="language-wrapper">
           <SiReactquery className="fa-fan language-icon" />
           <h3 className="lang-title">React Query</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <SiNodedotjs className="node-js language-icon" />
+          <h3 className="lang-title">Node.js</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <SiTailwindcss className="tailwind-css language-icon" />
+          <h3 className="lang-title">Tailwind CSS</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <BiLogoFirebase className="firebase language-icon" />
+          <h3 className="lang-title">Firebase</h3>
+        </div>
+
+        <div className="language-wrapper">
+          <SiMongodb className="mongo-db language-icon" />
+          <h3 className="lang-title">MongoDB</h3>
         </div>
       </div>
 

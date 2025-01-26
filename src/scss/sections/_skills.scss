@@ -43,12 +43,14 @@
       .fa-sass,
       .fa-react,
       .fa-bootstrap,
-      .fa-node-js,
+      .node-js,
       .cib-next-js,
       .cib-redux,
       .fa-fan,
-      .fa-node-js,
-      .php {
+      .php,
+      .mongo-db,
+      .tailwind-css,
+      .firebase {
         font-size: 8rem;
         color: var(--lang-icon-color);
       }
@@ -60,13 +62,14 @@
       .fa-sass:hover,
       .fa-react:hover,
       .fa-bootstrap:hover,
-      .fa-node-js:hover,
+      .node-js:hover,
       .cib-next-js:hover,
       .cib-redux:hover,
       .fa-fan:hover,
-      .php:hover {
-        -webkit-transition: ease-in-out 0.3s;
-        -o-transition: ease-in-out 0.3s;
+      .php:hover,
+      .mongo-db:hover,
+      .firebase:hover,
+      .tailwind-css:hover {
         transition: ease-in-out 0.3s;
         transform: scale(1.1);
       }
@@ -110,6 +113,22 @@
       .php:hover {
         color: #7377ad;
       }
+
+      .node-js:hover {
+        color: #74b15b;
+      }
+
+      .mongo-db:hover {
+        color: #59b747;
+      }
+
+      .tailwind-css:hover {
+        color: #3ebff8;
+      }
+
+      .firebase:hover {
+        color: #ffa714;
+      }
     }
   }
   .learning-skills {
@@ -149,7 +168,7 @@
       }
 
       .typescript,
-      .fa-node-js,
+      .node-js,
       .php {
         font-size: 8rem;
         color: var(--lang-icon-color);
@@ -157,19 +176,13 @@
 
       .typescript:hover,
       .php:hover,
-      .fa-node-js:hover {
-        -webkit-transition: ease-in-out 0.3s;
-        -o-transition: ease-in-out 0.3s;
+      .node-js:hover {
         transition: ease-in-out 0.3s;
         transform: scale(1.1);
       }
 
       .typescript:hover {
         color: #007acc;
-      }
-
-      .fa-node-js:hover {
-        color: #74b15b;
       }
 
       .php:hover {
@@ -195,11 +208,11 @@
         .fa-sass,
         .fa-react,
         .fa-bootstrap,
-        .fa-node-js,
+        .node-js,
         .cib-next-js,
         .cib-redux,
         .fa-fan,
-        .fa-node-js {
+        .node-js {
           font-size: 5rem;
         }
       }
@@ -207,7 +220,7 @@
     .learning-skills {
       .language-wrapper {
         .typescript,
-        .fa-node-js {
+        .node-js {
           font-size: 5rem;
         }
       }
