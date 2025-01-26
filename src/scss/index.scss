@@ -1,3 +1,3 @@
-@import "./variables";
-@import "./components/";
-@import "./sections/";
+@use "variables";
+@use "components/";
+@use "sections/" as sections;
