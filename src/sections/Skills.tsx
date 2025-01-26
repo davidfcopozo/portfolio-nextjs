@@ -11,8 +11,9 @@ import {
   SiReactquery,
   SiRedux,
   SiSass,
-  SiTypescript,
+  SiPhp,
 } from "react-icons/si";
+import { TbFileTypeSql } from "react-icons/tb";
 
 const Skills = () => {
   return (
@@ -97,13 +98,13 @@ const Skills = () => {
         </motion.div>
         <div className="learning-wrapper">
           <div className="language-wrapper">
-            <SiTypescript className="typescript language-icon" />
-            <h3 className="lang-title">Typescript</h3>
+            <TbFileTypeSql className="typescript language-icon" />
+            <h3 className="lang-title">SQL</h3>
           </div>
 
           <div className="language-wrapper">
-            <SiNodedotjs className="fa-node-js language-icon" />
-            <h3 className="lang-title">Node JS</h3>
+            <SiPhp className="php language-icon" />
+            <h3 className="lang-title">PHP</h3>
           </div>
         </div>
       </div>

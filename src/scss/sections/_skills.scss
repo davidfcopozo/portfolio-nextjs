@@ -47,7 +47,8 @@
       .cib-next-js,
       .cib-redux,
       .fa-fan,
-      .fa-node-js {
+      .fa-node-js,
+      .php {
         font-size: 8rem;
         color: var(--lang-icon-color);
       }
@@ -62,7 +63,8 @@
       .fa-node-js:hover,
       .cib-next-js:hover,
       .cib-redux:hover,
-      .fa-fan:hover {
+      .fa-fan:hover,
+      .php:hover {
         -webkit-transition: ease-in-out 0.3s;
         -o-transition: ease-in-out 0.3s;
         transition: ease-in-out 0.3s;
@@ -104,6 +106,10 @@
       .fa-fan:hover {
         color: #f23e50;
       }
+
+      .php:hover {
+        color: #7377ad;
+      }
     }
   }
   .learning-skills {
@@ -143,12 +149,14 @@
       }
 
       .typescript,
-      .fa-node-js {
+      .fa-node-js,
+      .php {
         font-size: 8rem;
         color: var(--lang-icon-color);
       }
 
       .typescript:hover,
+      .php:hover,
       .fa-node-js:hover {
         -webkit-transition: ease-in-out 0.3s;
         -o-transition: ease-in-out 0.3s;
@@ -162,6 +170,10 @@
 
       .fa-node-js:hover {
         color: #74b15b;
+      }
+
+      .php:hover {
+        color: #7377ad;
       }
     }
   }
