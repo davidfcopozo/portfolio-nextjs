@@ -1,5 +1,31 @@
 [
   {
+    "image": "/techycomm.webp",
+    "projectName": "TechyComm",
+    "projectLink": "https://personal-blog-zy4i.vercel.app",
+    "projectDescription": "Social blog platform designed to allow users to share and explore content dynamically. Currently under development.",
+    "projectTech": [
+      "Next.Js",
+      "React Js",
+      "React Query",
+      "Tailwind CSS",
+      "NodeJs",
+      "Express",
+      "JWT",
+      "NextAuth",
+      "Firebase",
+      "MongoDB",
+      "NodeMailer",
+      "DOMPurify",
+      "ReactQuill",
+      "Mongoose"
+    ],
+    "projectExternalLinks": {
+      "github": "https://github.com/davidfcopozo/personal-blog",
+      "externalLink": "https://personal-blog-zy4i.vercel.app"
+    }
+  },
+  {
     "image": "/sound-scale.webp",
     "projectName": "SoundScale",
     "projectLink": "https://github.com/No-Country/s7-25-ft-desafioreactnative",
@@ -48,7 +74,7 @@
   {
     "image": "/transportesligeros-juank.webp",
     "projectName": "Transportes Ligeros JuanK",
-    "projectLink": "https://www.transportesligeros.es/",
+    "projectLink": "https://transportesligerosjuank-k3y7f62b1-davidfcopozo.vercel.app/",
     "projectDescription": "Moving company website designed and built to boost conversion rate by having multiple call-to-action buttons without being too aggressive.",
     "projectTech": [
       "Javascript",
@@ -60,7 +86,7 @@
     ],
     "projectExternalLinks": {
       "github": "https://github.com/davidfcopozo/moving-company",
-      "externalLink": "https://www.transportesligerosjuank.es/"
+      "externalLink": "https://transportesligerosjuank-k3y7f62b1-davidfcopozo.vercel.app/"
     }
   },
   {
