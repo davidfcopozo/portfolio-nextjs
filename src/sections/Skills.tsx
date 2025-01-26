@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   SiBootstrap,
@@ -14,11 +14,29 @@ import {
   SiPhp,
 } from "react-icons/si";
 import { TbFileTypeSql } from "react-icons/tb";
+import { useInView } from "react-intersection-observer";
 
-const Skills = () => {
+const Skills = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
+
   return (
-    <section id="skills" className="skills">
+    <section id={id} className="skills">
       <motion.div
+        ref={ref}
         initial="hidden"
         className="title"
         whileInView="visible"

@@ -1,14 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import projectsData from "@/data/projectsData.json";
+import { useInView } from "react-intersection-observer";
 
-const Projects = () => {
+const Projects = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id={id}>
       <motion.div
+        ref={ref}
         className="title"
         initial="hidden"
         whileInView="visible"

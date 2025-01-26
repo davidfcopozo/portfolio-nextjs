@@ -2,8 +2,24 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import experiences from "@/data/experiences.json";
+import { useInView } from "react-intersection-observer";
 
-const Experience = () => {
+const Experience = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
@@ -16,8 +32,9 @@ const Experience = () => {
 
   return (
     <motion.section
+      ref={ref}
       className="experience"
-      id="experience"
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

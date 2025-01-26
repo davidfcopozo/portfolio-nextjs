@@ -1,12 +1,30 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const About = () => {
+const About = ({
+  id,
+  onVisible,
+}: {
+  id: string;
+  onVisible: (id: string) => void;
+}) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      onVisible(id);
+    }
+  }, [inView, id, onVisible]);
+
   return (
     <motion.section
+      ref={ref}
       className="about"
-      id="about"
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -35,7 +53,7 @@ const About = () => {
         </div>
         <div className="about-grid-photo">
           <div className="about-grid-photo-container">
-            <Image src="/about-pic.jpg" alt="profile" fill />
+            <Image src="/about-pic.webp" alt="profile" fill />
           </div>
         </div>
       </div>
