@@ -39,6 +39,8 @@
           width: 600px;
           height: 300px;
           z-index: 6;
+          border-radius: 5px;
+          overflow: hidden;
         }
         & {
           position: absolute;
@@ -62,11 +64,13 @@
           height: 100%;
           background-color: var(--theme-color);
           opacity: 0.4;
+          border-radius: 5px;
         }
         img {
           z-index: 0;
           filter: grayscale(100%);
           transition: 0.3s ease-in-out;
+          border-radius: 5px;
         }
       }
       &-info {
