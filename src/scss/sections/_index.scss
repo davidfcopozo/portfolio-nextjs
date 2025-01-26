@@ -1,9 +1,9 @@
-@use "main";
-@use "navbar";
-@use "hero";
-@use "about";
-@use "expereince";
-@use "projects";
-@use "contact";
-@use "footer";
-@use "skills";
+@use "main" as main;
+@use "navbar" as navbar;
+@use "hero" as hero;
+@use "about" as about;
+@use "expereince" as expereince;
+@use "projects" as projects;
+@use "contact" as contact;
+@use "footer" as footer;
+@use "skills" as skills;
