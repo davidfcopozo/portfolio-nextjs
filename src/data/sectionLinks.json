@@ -1,7 +1,37 @@
 [
-  { "name": "Experience", "link": "/#experience" },
-  { "name": "Projects", "link": "/#projects" },
-  { "name": "Skills", "link": "/#skills" },
-  { "name": "About", "link": "/#about" },
-  { "name": "Contact", "link": "/#contact" }
+  {
+    "name": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "link": "/#experience"
+  },
+  {
+    "name": {
+      "en": "Projects",
+      "es": "Proyectos"
+    },
+    "link": "/#projects"
+  },
+  {
+    "name": {
+      "en": "Skills",
+      "es": "Habilidades"
+    },
+    "link": "/#skills"
+  },
+  {
+    "name": {
+      "en": "About",
+      "es": "Sobre mí"
+    },
+    "link": "/#about"
+  },
+  {
+    "name": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "link": "/#contact"
+  }
 ]

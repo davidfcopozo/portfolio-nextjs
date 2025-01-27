@@ -1,9 +1,15 @@
 [
   {
     "image": "/techycomm.webp",
-    "projectName": "TechyComm",
+    "projectName": {
+      "en": "TechyComm",
+      "es": "TechyComm"
+    },
     "projectLink": "https://personal-blog-zy4i.vercel.app",
-    "projectDescription": "Social blog platform designed to allow users to share and explore content dynamically. Currently under development.",
+    "projectDescription": {
+      "en": "Social blog platform designed to allow users to share and explore content dynamically. Currently under development.",
+      "es": "Plataforma de blog social diseñada para permitir a los usuarios compartir y explorar contenido de manera dinámica. Actualmente en desarrollo."
+    },
     "projectTech": [
       "Next.Js",
       "React Js",
@@ -27,9 +33,15 @@
   },
   {
     "image": "/sound-scale.webp",
-    "projectName": "SoundScale",
+    "projectName": {
+      "en": "SoundScale",
+      "es": "SoundScale"
+    },
     "projectLink": "https://github.com/No-Country/s7-25-ft-desafioreactnative",
-    "projectDescription": "React Native Full-stack project in which I was in charge of the Project&apos;s structure, Music Player with Expo-AV, Navigation structure with React Navigation, Global state setup with Redux Toolkit, created a release version of the app that could be shared with users, among other features.",
+    "projectDescription": {
+      "en": "React Native Full-stack project in which I was in charge of the Project's structure, Music Player with Expo-AV, Navigation structure with React Navigation, Global state setup with Redux Toolkit, created a release version of the app that could be shared with users, among other features.",
+      "es": "Proyecto Full-stack en React Native en el que me encargué de la estructura del proyecto, el reproductor de música con Expo-AV, la estructura de navegación con React Navigation, la configuración del estado global con Redux Toolkit, la creación de una versión de lanzamiento de la aplicación que pudiera compartirse con los usuarios, entre otras características."
+    },
     "projectTech": [
       "React Native",
       "Redux Toolkit",
@@ -45,9 +57,15 @@
   },
   {
     "image": "/mascotapp.webp",
-    "projectName": "MascotApp",
+    "projectName": {
+      "en": "MascotApp",
+      "es": "MascotApp"
+    },
     "projectLink": "https://github.com/No-Country/C9-37-ReactNative",
-    "projectDescription": "React Native Full-stack project in which I was in charge of the App design, chat & Sign In/Up implementation with Firebase, reset password website, among other features.",
+    "projectDescription": {
+      "en": "React Native Full-stack project in which I was in charge of the App design, chat & Sign In/Up implementation with Firebase, reset password website, among other features.",
+      "es": "Proyecto Full-stack en React Native en el que me encargué del diseño de la aplicación, la implementación del chat y el registro/inicio de sesión con Firebase, el sitio web de restablecimiento de contraseña, entre otras características."
+    },
     "projectTech": [
       "React Native",
       "Redux Toolkit",
@@ -62,9 +80,15 @@
   },
   {
     "image": "/rainbow-george.webp",
-    "projectName": "Jorge García's Website",
+    "projectName": {
+      "en": "Jorge García's Website",
+      "es": "Sitio web de Jorge García"
+    },
     "projectLink": "https://www.rainbowgeorge.es/",
-    "projectDescription": "I changed the Elementor WordPress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently.",
+    "projectDescription": {
+      "en": "I changed the Elementor WordPress theme that Jorge had been using to a new theme. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently.",
+      "es": "Cambié el tema de Elementor en WordPress que Jorge había estado utilizando por uno nuevo. Esto requirió mucha planificación y atención al detalle, ya que quería asegurarme de que el nuevo tema no solo se viera bien, sino que también funcionara de manera fluida y eficiente."
+    },
     "projectTech": ["Wordpress", "Dreamy Portfolio Theme", "Custom CSS"],
     "projectExternalLinks": {
       "github": "",
@@ -73,9 +97,15 @@
   },
   {
     "image": "/transportesligeros-juank.webp",
-    "projectName": "Transportes Ligeros JuanK",
+    "projectName": {
+      "en": "Transportes Ligeros JuanK",
+      "es": "Transportes Ligeros JuanK"
+    },
     "projectLink": "https://transportesligerosjuank-k3y7f62b1-davidfcopozo.vercel.app/",
-    "projectDescription": "Moving company website designed and built to boost conversion rate by having multiple call-to-action buttons without being too aggressive.",
+    "projectDescription": {
+      "en": "Moving company website designed and built to boost conversion rate by having multiple call-to-action buttons without being too aggressive.",
+      "es": "Sitio web para una empresa de mudanzas diseñado y construido para aumentar la tasa de conversión mediante múltiples botones de llamada a la acción sin ser demasiado agresivo."
+    },
     "projectTech": [
       "Javascript",
       "NextJs",
@@ -91,9 +121,15 @@
   },
   {
     "image": "/budget-buddy.webp",
-    "projectName": "Budget Buddy",
+    "projectName": {
+      "en": "Budget Buddy",
+      "es": "Budget Buddy"
+    },
     "projectLink": "https://budget-buddy-d0db6.web.app/",
-    "projectDescription": "A Front-end App YouTube challenge that I tweaked by adding additional features like backend, responsiveness, Multilingual & dark theme feature.",
+    "projectDescription": {
+      "en": "A Front-end App YouTube challenge that I tweaked by adding additional features like backend, responsiveness, Multilingual & dark theme feature.",
+      "es": "Una aplicación Front-end de un desafío de YouTube que modifiqué añadiendo características adicionales como backend, responsividad, funciones multilingües y tema oscuro."
+    },
     "projectTech": [
       "React Js",
       "Javascript",
@@ -113,9 +149,15 @@
   },
   {
     "image": "/shortlify.webp",
-    "projectName": "Shortlify",
+    "projectName": {
+      "en": "Shortlify",
+      "es": "Shortlify"
+    },
     "projectLink": "https://davidfcopozo.github.io/url-shortener-app/",
-    "projectDescription": "This is a functional Frontend Mentor's Link Shortener Landing Page challenge with a difficulty of Intermediate.",
+    "projectDescription": {
+      "en": "This is a functional Frontend Mentor's Link Shortener Landing Page challenge with a difficulty of Intermediate.",
+      "es": "Este es un desafío funcional de Frontend Mentor: una página de inicio para un acortador de enlaces con una dificultad intermedia."
+    },
     "projectTech": [
       "React Js",
       "Javascript",

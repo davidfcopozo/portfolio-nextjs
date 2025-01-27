@@ -1,0 +1,30 @@
+{
+  "nameField": {
+    "en": "Name:",
+    "es": "Nombre:"
+  },
+  "namePlaceholder": {
+    "en": "John Doe",
+    "es": "Juan Pérez"
+  },
+  "emailField": {
+    "en": "E-Mail:",
+    "es": "Correo:"
+  },
+  "emailPlaceholder": {
+    "en": "your-email@example.com",
+    "es": "tu-correo@ejemplo.com"
+  },
+  "detailsField": {
+    "en": "Message:",
+    "es": "Mensaje:"
+  },
+  "detailsPlaceholder": {
+    "en": "Type your message here...",
+    "es": "Escriba su mensaje aquí..."
+  },
+  "submitButton": {
+    "en": "Send",
+    "es": "Enviar"
+  }
+}

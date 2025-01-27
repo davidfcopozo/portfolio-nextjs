@@ -1,0 +1,18 @@
+{
+  "greeting": {
+    "en": "Hello!",
+    "es": "¡Hola!"
+  },
+  "name": {
+    "en": "I&apos;m David Francisco",
+    "es": "Soy David Francisco"
+  },
+  "location": {
+    "en": "based on ...the web.",
+    "es": "de ...la web."
+  },
+  "description": {
+    "en": "I&apos;m a Fullstack Developer that loves building things for the web.",
+    "es": "Soy un Desarrollador Fullstack que ama desarrollar para la web."
+  }
+}

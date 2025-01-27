@@ -1,0 +1,18 @@
+{
+  "title": {
+    "en": "Let&apos;s talk!",
+    "es": "¡Hablemos!"
+  },
+  "subtitle": {
+    "en": "Feel free to send me an e-mail.",
+    "es": "Puedes enviarme un correo electrónico."
+  },
+  "button": {
+    "en": "Send E-Mail",
+    "es": "Enviar Correo"
+  },
+  "alternative": {
+    "en": "Alternatively, you can also fill up this form and send me a message!",
+    "es": "¡Otra opción es llenar este formulario y enviarme un mensaje!"
+  }
+}

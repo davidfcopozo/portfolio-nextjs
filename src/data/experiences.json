@@ -1,39 +1,97 @@
 [
   {
-    "name": "No Country",
-    "role": "Frontend Developer",
+    "name": {
+      "en": "No Country",
+      "es": "No Country"
+    },
+    "role": {
+      "en": "Frontend Developer",
+      "es": "Desarrollador Frontend"
+    },
     "url": "https://www.nocountry.tech/",
-    "start": "January 2023",
-    "end": "April 2023",
-    "shortDescription": [
-      "As a Frontend Developer at No Country, I worked with a team of developers, designers, and project managers to build two Mobile Apps as part of their job environment simulation.",
-      "Throughout the time of the internship, I had the opportunity to work with various technologies, including React Native, Redux Toolkit, Nativewind, Node.js, Sequelize, Firebase, Jira, Trello among others.",
-      "I also had the opportunity to design one of the apps with Miro and Figma.",
-      "Additionally, I was in charge of setting up the project structure and boilerplate code for one of the projects."
-    ]
+    "start": {
+      "en": "January 2023",
+      "es": "Enero 2023"
+    },
+    "end": {
+      "en": "April 2023",
+      "es": "Abril 2023"
+    },
+    "shortDescription": {
+      "en": [
+        "As a Frontend Developer at No Country, I worked with a team of developers, designers, and project managers to build two Mobile Apps as part of their job environment simulation.",
+        "Throughout the time of the internship, I had the opportunity to work with various technologies, including React Native, Redux Toolkit, Nativewind, Node.js, Sequelize, Firebase, Jira, Trello among others.",
+        "I also had the opportunity to design one of the apps with Miro and Figma.",
+        "Additionally, I was in charge of setting up the project structure and boilerplate code for one of the projects."
+      ],
+      "es": [
+        "Como Desarrollador Frontend en No Country, trabajé con un equipo de desarrolladores, diseñadores y gerentes de proyectos para construir dos aplicaciones móviles como parte de su simulación de entorno laboral.",
+        "Durante el tiempo de la pasantía, tuve la oportunidad de trabajar con varias tecnologías, incluyendo React Native, Redux Toolkit, Nativewind, Node.js, Sequelize, Firebase, Jira, Trello, entre otras.",
+        "También tuve la oportunidad de diseñar una de las aplicaciones con Miro y Figma.",
+        "Además, estuve a cargo de configurar la estructura del proyecto y el código base para uno de los proyectos."
+      ]
+    }
   },
   {
-    "name": "Jorge García",
-    "role": "Frontend Developer (Freelance)",
+    "name": {
+      "en": "Jorge García",
+      "es": "Jorge García"
+    },
+    "role": {
+      "en": "Frontend Developer (Freelance)",
+      "es": "Desarrollador Frontend (Freelance)"
+    },
     "url": "https://rainbowgeorge.es/",
-    "start": "April 2023",
-    "end": "April 2023",
-    "shortDescription": [
-      "I worked closely with Jorge to understand his specific needs and preferences and I was able to incorporate his feedback into picking the most convenient theme.",
-      "I was responsible for revamping the Elementor WordPress theme that Jorge had been using with a new one. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently."
-    ]
+    "start": {
+      "en": "April 2023",
+      "es": "Abril 2023"
+    },
+    "end": {
+      "en": "April 2023",
+      "es": "Abril 2023"
+    },
+    "shortDescription": {
+      "en": [
+        "I worked closely with Jorge to understand his specific needs and preferences and I was able to incorporate his feedback into picking the most convenient theme.",
+        "I was responsible for revamping the Elementor WordPress theme that Jorge had been using with a new one. This involved a lot of careful planning and attention to detail, as I wanted to ensure that the new theme would not only look great but also function smoothly and efficiently."
+      ],
+      "es": [
+        "Trabajé estrechamente con Jorge para comprender sus necesidades y preferencias específicas, y pude incorporar sus comentarios para elegir el tema más conveniente.",
+        "Fui responsable de renovar el tema de Elementor en WordPress que Jorge había estado utilizando por uno nuevo. Esto requirió mucha planificación y atención al detalle, ya que quería asegurarme de que el nuevo tema no solo se viera bien, sino que también funcionara de manera fluida y eficiente."
+      ]
+    }
   },
   {
-    "name": "TL JuanK",
-    "role": "Frontend Developer (Freelance)",
+    "name": {
+      "en": "TL JuanK",
+      "es": "TL JuanK"
+    },
+    "role": {
+      "en": "Frontend Developer (Freelance)",
+      "es": "Desarrollador Frontend (Freelance)"
+    },
     "url": "https://transportesligerosjuank.es",
-    "start": "February 2023",
-    "end": "February 2023",
-    "shortDescription": [
-      "I designed and built a website that effectively showcased the services offered by Transportes Ligeros JuanK.",
-      "For the design and build of the website I used a variety of technologies, including NextJs, Javascript, Framer Motion, SASS Formik, and Yup.",
-      "I drew on my experience as a Front Developer to ensure that the website was optimized for performance, SEO, and speed.",
-      "I also utilized my strong communication skills to keep the client informed and engaged throughout the development process."
-    ]
+    "start": {
+      "en": "February 2023",
+      "es": "Febrero 2023"
+    },
+    "end": {
+      "en": "February 2023",
+      "es": "Febrero 2023"
+    },
+    "shortDescription": {
+      "en": [
+        "I designed and built a website that effectively showcased the services offered by Transportes Ligeros JuanK.",
+        "For the design and build of the website I used a variety of technologies, including NextJs, Javascript, Framer Motion, SASS Formik, and Yup.",
+        "I drew on my experience as a Front Developer to ensure that the website was optimized for performance, SEO, and speed.",
+        "I also utilized my strong communication skills to keep the client informed and engaged throughout the development process."
+      ],
+      "es": [
+        "Diseñé y construí un sitio web que mostró de manera efectiva los servicios ofrecidos por Transportes Ligeros JuanK.",
+        "Para el diseño y construcción del sitio web, utilicé una variedad de tecnologías, incluyendo NextJs, Javascript, Framer Motion, SASS Formik y Yup.",
+        "Apliqué mi experiencia como Desarrollador Frontend para asegurarme de que el sitio web estuviera optimizado para el rendimiento, SEO y velocidad.",
+        "También utilicé mis fuertes habilidades de comunicación para mantener al cliente informado y comprometido durante todo el proceso de desarrollo."
+      ]
+    }
   }
 ]
