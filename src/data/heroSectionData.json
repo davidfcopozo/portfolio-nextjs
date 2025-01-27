@@ -4,7 +4,7 @@
     "es": "¡Hola!"
   },
   "name": {
-    "en": "I&apos;m David Francisco",
+    "en": "I'm David Francisco",
     "es": "Soy David Francisco"
   },
   "location": {
@@ -12,7 +12,7 @@
     "es": "de ...la web."
   },
   "description": {
-    "en": "I&apos;m a Fullstack Developer that loves building things for the web.",
+    "en": "I'm a Fullstack Developer that loves building things for the web.",
     "es": "Soy un Desarrollador Fullstack que ama desarrollar para la web."
   }
 }
