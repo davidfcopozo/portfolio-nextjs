@@ -54,7 +54,7 @@ function Navbar({ activeSection }: { activeSection: string }) {
             ease: "easeInOut",
           }}
         >
-          <Link href="davidfrancisco.dev">
+          <Link href="#hero">
             <Logo />
           </Link>
         </motion.div>

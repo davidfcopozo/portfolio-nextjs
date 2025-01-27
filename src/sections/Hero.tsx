@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <motion.div className="hero-inner-container">
         <motion.h1
           className="hero-title"
