@@ -4,7 +4,7 @@ import SocialIcons from "@/components/SocialIcons";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import Navbar from "@/sections/Navbar";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
@@ -13,10 +13,25 @@ import Skills from "@/sections/Skills";
 import { SuccessProvider } from "@/context/FormSuccessContext";
 import FormSuccess from "@/components/FormSuccess";
 import Script from "next/script";
+type language = "en" | "es";
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [language, setLanguage] = useState<language>("en");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      let language = localStorage.getItem("language");
+      if (!language) {
+        language = navigator.language.startsWith("es") ? "es" : "en";
+        localStorage.setItem("language", language);
+        setLanguage(language as language);
+      } else {
+        setLanguage(language as language);
+      }
+    }
+  }, []);
 
   const sections = [
     { id: "experience", Component: Experience },
@@ -59,16 +74,21 @@ function Index() {
         </Head>
         {showContent && (
           <>
-            <Navbar activeSection={activeSection} />
+            <Navbar activeSection={activeSection} language={language} />
             <SocialIcons />
             <main>
-              <Hero />
+              <Hero language={language} />
               {sections.map(({ id, Component }) => (
-                <Component key={id} id={id} onVisible={setActiveSection} />
+                <Component
+                  key={id}
+                  id={id}
+                  onVisible={setActiveSection}
+                  language={language}
+                />
               ))}
             </main>
-            <Footer />
-            <FormSuccess />
+            <Footer language={language} />
+            <FormSuccess language={language} />
           </>
         )}
         <Loader isLoading={isLoading} setIsLoading={() => {}} />
