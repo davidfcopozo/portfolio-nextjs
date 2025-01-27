@@ -4,8 +4,9 @@ import xMark from "../../public/xMark.svg";
 import checkMark from "../../public/check.svg";
 import Image from "next/legacy/image";
 import { useSuccessContext } from "@/context/FormSuccessContext";
+import formSuccessData from "@/data/formSuccessData.json";
 
-const FormSuccess = () => {
+const FormSuccess = ({ language }: { language: "en" | "es" }) => {
   const [open, setOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -73,15 +74,23 @@ const FormSuccess = () => {
             objectFit="cover"
             objectPosition="center"
             src={open ? checkMark.src : xMark.src}
-            alt={open ? "Green checkmark" : "Red X"}
+            alt={
+              open
+                ? formSuccessData.altGreen[language]
+                : formSuccessData.altRed[language]
+            }
           />
         </div>
 
-        <h2>{open ? "Thank you!" : "Sorry!"}</h2>
+        <h2>
+          {open
+            ? formSuccessData.thank[language]
+            : formSuccessData.sorry[language]}
+        </h2>
         <p>
           {open
-            ? `Your message has been sent successfully. I will get back to you as soon as possible.`
-            : "Something went wrong. Please try again"}
+            ? formSuccessData.success[language]
+            : formSuccessData.fail[language]}
         </p>
         <motion.button
           style={{ backgroundColor: `${bgColor}` }}
@@ -90,7 +99,9 @@ const FormSuccess = () => {
           onClick={() => setFormSubmitted(false)}
           className="form-success-btn"
         >
-          {open ? "Ok!" : "Try Again"}
+          {open
+            ? formSuccessData.buttonSuccess[language]
+            : formSuccessData.buttonFail[language]}
         </motion.button>
       </div>
     </motion.div>
