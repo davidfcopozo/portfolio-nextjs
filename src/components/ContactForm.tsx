@@ -14,7 +14,7 @@ interface Values {
 
 const ContactForm = ({ language }: { language: "en" | "es" }) => {
   const { contactFormInitialValues, contactFormValidationSchema } =
-    yupContactFormValidation();
+    yupContactFormValidation({ language });
   const { submitData } = useFormSubmit();
 
   const submitForm = async (
