@@ -50,7 +50,7 @@ const Contact = ({
       <p className="contact-form-text">
         {contactSectionData.alternative[language]}
       </p>
-      <ContactForm language="es" />
+      <ContactForm language={language} />
     </motion.section>
   );
 };
