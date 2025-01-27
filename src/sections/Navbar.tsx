@@ -7,7 +7,13 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import sectionLinks from "@/data/sectionLinks.json";
 
-function Navbar({ activeSection }: { activeSection: string }) {
+function Navbar({
+  activeSection,
+  language,
+}: {
+  activeSection: string;
+  language: "en" | "es";
+}) {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
 
@@ -89,7 +95,7 @@ function Navbar({ activeSection }: { activeSection: string }) {
           <ul className="nav-items-list">
             {sectionLinks.map(({ name, link }, index) => (
               <motion.li
-                key={name}
+                key={name[language]}
                 className="nav-items-list-item"
                 initial={{ opacity: 0, y: -25 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -102,10 +108,12 @@ function Navbar({ activeSection }: { activeSection: string }) {
                 <Link
                   href={link}
                   className={`nav-items-list-item-link ${
-                    activeSection === name.toLocaleLowerCase() ? "active" : ""
+                    activeSection === name[language].toLocaleLowerCase()
+                      ? "active"
+                      : ""
                   }`}
                 >
-                  {name}
+                  {name[language]}
                 </Link>
               </motion.li>
             ))}
@@ -121,8 +129,12 @@ function Navbar({ activeSection }: { activeSection: string }) {
             }}
           >
             <Button
-              text="Resume"
-              link="https://docs.google.com/document/d/1A3CU5NRgKrYcM9pcLLfDJmKNeap2iNfB/edit?usp=sharing&ouid=113705533080716991628&rtpof=true&sd=true"
+              text={language === "en" ? "Resume" : "Currículum"}
+              link={
+                language === "en"
+                  ? "https://drive.google.com/file/d/1A3CU5NRgKrYcM9pcLLfDJmKNeap2iNfB/view"
+                  : "https://drive.google.com/file/d/1ralmqHF3OSBb1qfad0fzcSs-g1lMYLWr/view"
+              }
               target="_blank"
             />
           </motion.div>

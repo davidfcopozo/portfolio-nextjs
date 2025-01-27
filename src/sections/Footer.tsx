@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FiCoffee } from "react-icons/fi";
 
-function Footer() {
+function Footer({ language }: { language: "en" | "es" }) {
   return (
     <footer>
       <Link
@@ -10,7 +10,10 @@ function Footer() {
         className="footer-link"
       >
         <span className="footer-info">
-          Built by David Francisco with {<FiCoffee />}.
+          {language === "en"
+            ? "Built by David Francisco with"
+            : "Desarrollado por David Francisco con"}{" "}
+          {<FiCoffee />}.
         </span>
       </Link>
     </footer>

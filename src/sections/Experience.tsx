@@ -7,9 +7,11 @@ import { useInView } from "react-intersection-observer";
 const Experience = ({
   id,
   onVisible,
+  language,
 }: {
   id: string;
   onVisible: (id: string) => void;
+  language: "en" | "es";
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -45,41 +47,43 @@ const Experience = ({
       }}
     >
       <div className="title">
-        <h2>My Experience</h2>
+        <h2>{language === "en" ? "My Esperience" : "Mis Experiencias"}</h2>
       </div>
       <div className="container">
         <ul className="exp-slider">
           <div className="underline"></div>
-          {experiences.map((experience, index) => {
-            return (
-              <li
-                className={`exp-slider-item ${
-                  index === selected && "exp-slider-item-selected"
-                }`}
-                onClick={() => setSelected(index)}
-                key={experience.name}
-              >
-                <span>{experience.name}</span>
-              </li>
-            );
-          })}
+          {experiences &&
+            experiences.map((experience, index) => {
+              return (
+                <li
+                  className={`exp-slider-item ${
+                    index === selected && "exp-slider-item-selected"
+                  }`}
+                  onClick={() => setSelected(index)}
+                  key={experience.name[language]}
+                >
+                  <span>{experience.name[language]}</span>
+                </li>
+              );
+            })}
         </ul>
         <div className="exp-details">
           <div className="exp-details-position">
             <h3>
-              <span>{experiences[selected].role}</span>
+              <span>{experiences[selected].role[language]}</span>
               <span className="exp-details-position-company">
                 &nbsp;@&nbsp;
                 <Link href={experiences[selected].url} className="link">
-                  {experiences[selected].name}
+                  {experiences[selected].end[language]}
                 </Link>
               </span>
             </h3>
             <p className="exp-details-range">
-              {experiences[selected].start} - {experiences[selected].end}
+              {experiences[selected].start[language]} -{" "}
+              {experiences[selected].end[language]}
             </p>
             <ul className="exp-details-list">
-              {experiences[selected].shortDescription.map(
+              {experiences[selected].shortDescription[language].map(
                 (description, index) => (
                   <li key={index} className="exp-details-list-item">
                     {description}

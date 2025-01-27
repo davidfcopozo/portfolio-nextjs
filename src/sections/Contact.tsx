@@ -3,13 +3,16 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import { useInView } from "react-intersection-observer";
+import contactSectionData from "@/data/contactSectionData.json";
 
 const Contact = ({
   id,
   onVisible,
+  language,
 }: {
   id: string;
   onVisible: (id: string) => void;
+  language: "en" | "es";
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -34,16 +37,20 @@ const Contact = ({
         hidden: { opacity: 0, y: 0 },
       }}
     >
-      <h2 className="contact-title">Let&apos;s talk!</h2>
-      <h2 className="contact-sub-title">Get In Touch</h2>
-      <p className="contact-text">Feel free to send me an e-mail.</p>
+      <h2 className="contact-sub-title">
+        {contactSectionData.title[language]}
+      </h2>
+      <p className="contact-text">{contactSectionData.subtitle[language]}</p>
       <div className="contact-cta">
-        <Button link="mailto:davidfco.pozo@gmail.com" text="Send E-Mail" />
+        <Button
+          link="mailto:davidfco.pozo@gmail.com"
+          text={contactSectionData.button[language]}
+        />
       </div>
       <p className="contact-form-text">
-        Alternatively, you can also drop-in an E-mail here!
+        {contactSectionData.alternative[language]}
       </p>
-      <ContactForm />
+      <ContactForm language="es" />
     </motion.section>
   );
 };

@@ -2,13 +2,16 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import aboutSectionData from "@/data/aboutSectionData.json";
 
 const About = ({
   id,
   onVisible,
+  language,
 }: {
   id: string;
   onVisible: (id: string) => void;
+  language: "en" | "es";
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -35,20 +38,15 @@ const About = ({
       }}
     >
       <div className="title">
-        <h2>About Me</h2>
+        <h2> {aboutSectionData.title[language]}</h2>
       </div>
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            My name is David, I am a frontend developer with a passion for
-            learning and building things that live on the internet.
+            {aboutSectionData.description[language].split(".")[0] + "."}
           </p>
           <p className="about-grid-info-text">
-            I discovered my passion for web development when I was forced to fix
-            my girlfriend&apos;s website menu bar, since we didn&apos;t have the
-            money to hire a developer, that&apos;s when I was bound to do some
-            research on HTML and CSS and I have been in love with web
-            development ever since.
+            {aboutSectionData.description[language].split(".")[1] + "."}
           </p>
         </div>
         <div className="about-grid-photo">

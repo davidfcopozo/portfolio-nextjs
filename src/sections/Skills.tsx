@@ -22,9 +22,11 @@ import { useInView } from "react-intersection-observer";
 const Skills = ({
   id,
   onVisible,
+  language,
 }: {
   id: string;
   onVisible: (id: string) => void;
+  language: "en" | "es";
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -50,7 +52,7 @@ const Skills = ({
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2>Skills</h2>
+        <h2>{language === "en" ? "Skills" : "Habilidades"}</h2>
       </motion.div>
       <div className="lang-wrapper-container">
         <div className="fa-html5 language-wrapper">
@@ -135,7 +137,9 @@ const Skills = ({
             hidden: { opacity: 0, y: 0 },
           }}
         >
-          <h2>Currenty Learning</h2>
+          <h2>
+            {language === "en" ? "Currently learning" : "Estoy aprendiendo"}
+          </h2>
         </motion.div>
         <div className="learning-wrapper">
           <div className="language-wrapper">

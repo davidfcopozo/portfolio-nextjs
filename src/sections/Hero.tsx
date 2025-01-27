@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import heroSectionData from "@/data/heroSectionData.json";
 
-function Hero() {
+function Hero({ language }: { language: "en" | "es" }) {
   return (
     <section className="hero" id="hero">
       <motion.div className="hero-inner-container">
@@ -16,7 +17,7 @@ function Hero() {
             delay: 0.6,
           }}
         >
-          Hello!
+          {heroSectionData.greeting[language]}
         </motion.h1>
         <motion.h2
           className="hero-title-large"
@@ -28,7 +29,7 @@ function Hero() {
             delay: 0.75,
           }}
         >
-          I&apos;m David Francisco
+          {heroSectionData.name[language]}
         </motion.h2>
         <motion.h3
           className="hero-title-large hero-title-sub"
@@ -40,7 +41,7 @@ function Hero() {
             delay: 1.05,
           }}
         >
-          based on ...the web.
+          {heroSectionData.location[language]}
         </motion.h3>
         <motion.p
           className="hero-text"
@@ -52,7 +53,7 @@ function Hero() {
             delay: 1.35,
           }}
         >
-          I&apos;m a Frontend Developer that loves building things for the web.
+          {heroSectionData.description[language]}
         </motion.p>
         <motion.div
           className="hero-button"
