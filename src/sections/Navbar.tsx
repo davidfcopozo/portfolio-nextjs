@@ -6,38 +6,59 @@ import { CgClose } from "react-icons/cg";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import sectionLinks from "@/data/sectionLinks.json";
+import LanguageButton from "@/components/LanguageButton";
 
 function Navbar({
   activeSection,
   language,
+  handleLanguageChange,
 }: {
   activeSection: string;
   language: "en" | "es";
+  handleLanguageChange: (lang: "en" | "es") => void;
 }) {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
 
   useLayoutEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
-    });
+    const handleScroll = () => {
+      setNavbarVisible(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
+    const handleNavLinkClick = (e: Event) => {
+      setResponsiveNavVisible(false);
+    };
+
     const links = document.querySelectorAll(".nav-items-list-item-link");
     links.forEach((link) => {
-      link.addEventListener("click", () => setResponsiveNavVisible(false));
-    });
-    const nav = document.querySelector(".nav-items");
-    nav?.addEventListener("click", (e) => {
-      e.stopPropagation();
+      link.addEventListener("click", handleNavLinkClick);
     });
 
-    const html = document.querySelector("html");
-    html?.addEventListener("click", (e) => {
-      setResponsiveNavVisible(false);
-    });
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleNavLinkClick);
+      });
+    };
   }, []);
+
+  useEffect(() => {
+    if (!responsiveNavVisible) return;
+
+    const handleBodyClick = (e: MouseEvent) => {
+      const nav = document.querySelector(".nav-items");
+      if (nav && !nav.contains(e.target as Node)) {
+        setResponsiveNavVisible(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleBodyClick);
+    return () => document.body.removeEventListener("click", handleBodyClick);
+  }, [responsiveNavVisible]);
 
   useEffect(() => {
     const main = document.querySelector("main");
@@ -136,6 +157,10 @@ function Navbar({
                   : "https://drive.google.com/file/d/1ralmqHF3OSBb1qfad0fzcSs-g1lMYLWr/view"
               }
               target="_blank"
+            />
+            <LanguageButton
+              language={language}
+              handleLanguageChange={handleLanguageChange}
             />
           </motion.div>
         </div>
