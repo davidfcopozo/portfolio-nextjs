@@ -44,13 +44,6 @@ const Projects = ({
       <div className="projects-container">
         {projectsData &&
           projectsData.map((project, index) => {
-            /*  const {
-              image,
-              projectDescription,
-              projectExternalLinks,
-              projectName,
-              projectTech,
-            } = project; */
             const name = project?.projectName[language];
             const description = project?.projectDescription[language];
 
