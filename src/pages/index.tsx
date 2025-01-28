@@ -4,7 +4,7 @@ import SocialIcons from "@/components/SocialIcons";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import Navbar from "@/sections/Navbar";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
@@ -65,6 +65,11 @@ function Index() {
     }
   }, [showContent]);
 
+  const handleLanguageChange = (lang: "en" | "es") => {
+    setLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
   return (
     <div className={`app`}>
       <SuccessProvider>
@@ -74,7 +79,11 @@ function Index() {
         </Head>
         {showContent && (
           <>
-            <Navbar activeSection={activeSection} language={language} />
+            <Navbar
+              activeSection={activeSection}
+              language={language}
+              handleLanguageChange={handleLanguageChange}
+            />
             <SocialIcons />
             <main>
               <Hero language={language} />
