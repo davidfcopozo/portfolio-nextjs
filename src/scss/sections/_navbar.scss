@@ -42,14 +42,14 @@ nav {
     }
     .nav-items {
       display: flex;
-      gap: 3em;
+      gap: 2em;
       color: var(--lightest-slate);
       font-family: var(--fira-code);
       font-weight: 500;
       font-size: var(--tsm1);
       &-list {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
         list-style-type: none;
         align-items: center;
         &-item {
