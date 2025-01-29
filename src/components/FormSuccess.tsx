@@ -1,110 +1,75 @@
-import React, { MouseEvent, useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import xMark from "../../public/xMark.svg";
-import checkMark from "../../public/check.svg";
-import Image from "next/legacy/image";
+import React, { useEffect, useState } from "react";
 import { useSuccessContext } from "@/context/FormSuccessContext";
 import formSuccessData from "@/data/formSuccessData.json";
+import Logo from "./Logo";
 
 const FormSuccess = ({ language }: { language: "en" | "es" }) => {
-  const [open, setOpen] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { success, fail, setSuccess, setFail } = useSuccessContext();
 
-  const { success, fail } = useSuccessContext();
+  const handleMessageClose = () => {
+    setSuccess(false);
+    setFail(false);
+  };
 
   useEffect(() => {
-    setOpen(success);
+    let timeoutId: NodeJS.Timeout;
 
     if (success || fail) {
-      setFormSubmitted(true);
+      timeoutId = setTimeout(() => {
+        handleMessageClose();
+      }, 5000);
     }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, [success, fail]);
 
-  const dropIn = {
-    hidden: {
-      y: "-100vh",
-      opacity: 0,
-    },
-    visible: {
-      y: "0",
-      opacity: 1,
-      transition: {
-        duration: 2,
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
-      },
-    },
-    exit: {
-      y: "100vh",
-      opacity: 0,
-      duration: 2,
-      stiffness: 200,
-    },
-  };
-
-  const handleModalContainerClick = (e: MouseEvent) => {
-    e.stopPropagation();
-    const modalContainer = document.getElementById("success-container");
-    modalContainer?.addEventListener("click", (e) => {
-      if (e.target === modalContainer) {
-        setFormSubmitted(false);
-      }
-    });
-  };
-
-  const bgColor = open ? "#43C467" : "#ff0000";
+  const isVisible = success || fail;
 
   return (
-    <motion.div
-      initial="hidden"
-      variants={dropIn}
-      animate={formSubmitted ? "visible" : "hidden"}
-      exit="exit"
-      className={`${"success-container"} ${formSubmitted && "is-active"}`}
-      id="success-container"
-      onClick={handleModalContainerClick}
-    >
-      <div className={"message-box"}>
-        <div className={"img-container"}>
-          <Image
-            layout="responsive"
-            width={100}
-            height={100}
-            objectFit="cover"
-            objectPosition="center"
-            src={open ? checkMark.src : xMark.src}
-            alt={
-              open
-                ? formSuccessData.altGreen[language]
-                : formSuccessData.altRed[language]
-            }
-          />
-        </div>
-
-        <h2>
-          {open
+    <div className={`card message-box ${isVisible ? "visible" : ""}`}>
+      <div className="icon">
+        <Logo />
+      </div>
+      <div className="content">
+        <h2 className="title">
+          {success
             ? formSuccessData.thank[language]
             : formSuccessData.sorry[language]}
         </h2>
-        <p>
-          {open
+        <p className="desc">
+          {success
             ? formSuccessData.success[language]
             : formSuccessData.fail[language]}
         </p>
-        <motion.button
-          style={{ backgroundColor: `${bgColor}` }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setFormSubmitted(false)}
-          className="form-success-btn"
-        >
-          {open
-            ? formSuccessData.buttonSuccess[language]
-            : formSuccessData.buttonFail[language]}
-        </motion.button>
+        <div className="actions">
+          <div onClick={handleMessageClose}>
+            <button className={`box-action-btn ${fail ? "error" : ""}`}>
+              {success
+                ? formSuccessData.buttonSuccess[language]
+                : formSuccessData.buttonFail[language]}
+            </button>
+          </div>
+        </div>
       </div>
-    </motion.div>
+      <button type="button" className="close" onClick={handleMessageClose}>
+        <svg
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   );
 };
 
