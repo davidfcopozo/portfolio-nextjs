@@ -39,6 +39,7 @@
       .php,
       .mongo-db,
       .tailwind-css,
+      .sql,
       .firebase {
         font-size: 8rem;
         color: var(--lang-icon-color);
@@ -58,6 +59,7 @@
       .php:hover,
       .mongo-db:hover,
       .firebase:hover,
+      .sql:hover,
       .tailwind-css:hover {
         transition: ease-in-out 0.3s;
         transform: scale(1.1);
@@ -148,19 +150,22 @@
 
       .typescript,
       .node-js,
+      .sql,
       .php {
         font-size: 8rem;
         color: var(--lang-icon-color);
       }
 
       .typescript:hover,
+      .sql:hover,
       .php:hover,
       .node-js:hover {
         transition: ease-in-out 0.3s;
         transform: scale(1.1);
       }
 
-      .typescript:hover {
+      .typescript:hover,
+      .sql:hover {
         color: #007acc;
       }
 
@@ -184,15 +189,18 @@
         .cib-next-js,
         .cib-redux,
         .fa-fan,
-        .node-js {
+        .node-js,
+        .mongo-db,
+        .tailwind-css,
+        .firebase {
           font-size: 5rem;
         }
       }
     }
     .learning-skills {
       .language-wrapper {
-        .typescript,
-        .node-js {
+        .php,
+        .sql {
           font-size: 5rem;
         }
       }

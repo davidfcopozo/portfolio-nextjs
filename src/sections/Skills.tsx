@@ -143,7 +143,7 @@ const Skills = ({
         </motion.div>
         <div className="learning-wrapper">
           <div className="language-wrapper">
-            <TbFileTypeSql className="typescript language-icon" />
+            <TbFileTypeSql className="sql language-icon" />
             <h3 className="lang-title">SQL</h3>
           </div>
 
