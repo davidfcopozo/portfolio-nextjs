@@ -65,9 +65,10 @@ const Projects = ({
                   <div className="project-image-container">
                     <Image
                       src={`${project.image}`}
-                      fill
                       alt={name}
+                      fill
                       quality={100}
+                      style={{ objectFit: "cover", borderRadius: "5px" }}
                     />
                   </div>
                 </div>
