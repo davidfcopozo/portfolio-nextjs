@@ -10,8 +10,8 @@ import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
-import { SuccessProvider } from "@/context/FormSuccessContext";
-import FormSuccess from "@/components/FormSuccess";
+import { SuccessProvider } from "@/context/FormMessageBoxContext";
+import FormSuccess from "@/components/FormMessageBox";
 import Script from "next/script";
 type language = "en" | "es";
 function Index() {

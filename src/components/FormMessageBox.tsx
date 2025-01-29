@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useSuccessContext } from "@/context/FormSuccessContext";
+import React, { useEffect } from "react";
+import { useSuccessContext } from "@/context/FormMessageBoxContext";
 import formSuccessData from "@/data/formSuccessData.json";
 import Logo from "./Logo";
 
