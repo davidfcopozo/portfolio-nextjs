@@ -9,7 +9,7 @@ function Logo() {
       width="100"
       height="100"
     >
-      <title>David Francisco&apos;s Logo</title>
+      <title>David Francisco's Logo</title>
       <g transform="translate(40.000000, 35.000000)">
         <path
           fill="currentColor"
