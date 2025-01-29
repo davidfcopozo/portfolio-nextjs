@@ -1,5 +1,5 @@
 .projects {
-  margin: 7rem 0 auto;
+  margin: 0 auto;
 
   .title {
     margin-top: 1rem;
@@ -179,6 +179,12 @@
       max-width: 500px;
       margin: 0 auto;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .projects {
+    margin-top: 7rem;
   }
 }
 
