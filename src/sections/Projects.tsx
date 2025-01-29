@@ -42,7 +42,12 @@ const Projects = ({
       <div className="projects-container">
         {projectsData &&
           projectsData.map((project, index) => (
-            <ProjectCard project={project} index={index} language={language} />
+            <ProjectCard
+              key={`${index}-${project.projectName["en"]}`}
+              project={project}
+              index={index}
+              language={language}
+            />
           ))}
       </div>
     </section>

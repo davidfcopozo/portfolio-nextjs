@@ -25,7 +25,7 @@ const FormSuccess = ({ language }: { language: "en" | "es" }) => {
         clearTimeout(timeoutId);
       }
     };
-  }, [success, fail, handleMessageClose]);
+  }, [success, fail]);
 
   const isVisible = success || fail;
 
