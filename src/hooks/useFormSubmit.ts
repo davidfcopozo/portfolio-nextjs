@@ -5,7 +5,6 @@ import { useSuccessContext } from "@/context/FormSuccessContext";
 const useFormSubmit = () => {
   const [data, setData] = useState("");
   const [error, setError] = useState("");
-
   const { setSuccess, setFail } = useSuccessContext();
 
   interface Values {
@@ -18,30 +17,40 @@ const useFormSubmit = () => {
     values: Values,
     onSubmitProps: FormikHelpers<Values>
   ) => {
-    await fetch("https://formsubmit.co/ajax/davidfco.pozo@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        NName: values.name,
-        Email: values.email,
-        Details: values.details,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        onSubmitProps.setSubmitting(false);
-        onSubmitProps.resetForm();
-        setData(data);
-        setSuccess(data.success);
-      })
-      .catch((error) => {
-        setError(error);
-        setFail(error);
-        onSubmitProps.setSubmitting(false);
-      });
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/davidfco.pozo@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            NName: values.name,
+            Email: values.email,
+            Details: values.details,
+          }),
+        }
+      );
+
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        throw new Error(responseData.message || "Submission failed");
+      }
+
+      setData(responseData);
+      setSuccess(true);
+      setFail(false);
+      onSubmitProps.resetForm();
+    } catch (error) {
+      setError(error as string);
+      setSuccess(false);
+      setFail(true);
+    } finally {
+      onSubmitProps.setSubmitting(false);
+    }
   };
 
   return { submitData };
