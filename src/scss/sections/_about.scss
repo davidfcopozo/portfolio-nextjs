@@ -24,16 +24,6 @@
       margin-bottom: 2rem;
       font-size: var(--tx2large);
       font-weight: 700;
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 2px;
-        margin-left: 220px;
-        background-color: var(--lightest-navy);
-      }
     }
   }
   &-grid {
@@ -116,13 +106,6 @@
   }
   @media screen and (max-width: 768px) {
     margin: 5rem auto;
-    .title {
-      h2 {
-        &::after {
-          width: 200px;
-        }
-      }
-    }
     &-grid {
       display: flex;
       justify-content: center;
@@ -146,23 +129,8 @@
       }
     }
   }
-  @media screen and (max-width: 968px) {
-    .title {
-      h2 {
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
+
   @media screen and (max-width: 480px) {
-    .title {
-      h2 {
-        &::after {
-          width: 100px;
-        }
-      }
-    }
     &-grid {
       &-photo {
         .overlay {

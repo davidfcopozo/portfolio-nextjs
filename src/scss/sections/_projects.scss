@@ -10,15 +10,6 @@
       margin-bottom: 2rem;
       font-size: var(--tx2large);
       font-weight: 700;
-      &::after {
-        width: 30%;
-        margin-left: 35%;
-
-        @media (max-width: 768px) {
-          width: 20%;
-          margin-left: 25%;
-        }
-      }
     }
   }
 
