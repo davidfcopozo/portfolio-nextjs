@@ -7,6 +7,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import sectionLinks from "@/data/sectionLinks.json";
 import LanguageButton from "@/components/LanguageButton";
+import NavSocialIcons from "@/components/NavSocialIcons";
 
 function Navbar({
   activeSection,
@@ -140,7 +141,6 @@ function Navbar({
             ))}
           </ul>
           <motion.div
-            className="nav-items-button"
             initial={{ opacity: 0, y: -25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -149,19 +149,22 @@ function Navbar({
               delay: 0.6,
             }}
           >
-            <Button
-              text={language === "en" ? "Resume" : "Currículum"}
-              link={
-                language === "en"
-                  ? "https://drive.google.com/file/d/1A3CU5NRgKrYcM9pcLLfDJmKNeap2iNfB/view"
-                  : "https://drive.google.com/file/d/1ralmqHF3OSBb1qfad0fzcSs-g1lMYLWr/view"
-              }
-              target="_blank"
-            />
-            <LanguageButton
-              language={language}
-              handleLanguageChange={handleLanguageChange}
-            />
+            <NavSocialIcons />
+            <div className="nav-items-button">
+              <Button
+                text={language === "en" ? "Resume" : "Currículum"}
+                link={
+                  language === "en"
+                    ? "https://drive.google.com/file/d/1A3CU5NRgKrYcM9pcLLfDJmKNeap2iNfB/view"
+                    : "https://drive.google.com/file/d/1ralmqHF3OSBb1qfad0fzcSs-g1lMYLWr/view"
+                }
+                target="_blank"
+              />
+              <LanguageButton
+                language={language}
+                handleLanguageChange={handleLanguageChange}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
