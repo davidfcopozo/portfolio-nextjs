@@ -1,6 +1,6 @@
 .projects {
   margin: 0 auto;
-
+  margin-top: 3rem;
   .title {
     margin-top: 1rem;
     h2 {
@@ -181,12 +181,6 @@
     }
   }
 }
-
-/* @media (min-width: 600px) {
-  .projects {
-    margin-top: 7rem;
-  }
-} */
 
 @media (min-width: 600px) and (max-width: 768px) {
   .projects {
