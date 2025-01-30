@@ -3,6 +3,7 @@
   max-width: 700px;
   margin-top: 3rem;
   margin-bottom: 4rem;
+  min-height: 80vh;
   .title {
     font-family: var(--raleway);
     color: var(--theme-color);
@@ -125,6 +126,6 @@
 
 @media screen and (min-width: 968px) {
   .experience {
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
   }
 }
