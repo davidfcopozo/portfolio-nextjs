@@ -130,7 +130,7 @@ function Navbar({
                 <Link
                   href={link}
                   className={`nav-items-list-item-link ${
-                    activeSection === name[language].toLocaleLowerCase()
+                    activeSection === name["en"].toLocaleLowerCase()
                       ? "active"
                       : ""
                   }`}
