@@ -70,6 +70,10 @@ function Index() {
     localStorage.setItem("language", lang);
   };
 
+  const handleActiveSection = (id: string) => {
+    setActiveSection(id);
+  };
+
   return (
     <div className={`app`}>
       <SuccessProvider>
@@ -91,7 +95,7 @@ function Index() {
                 <Component
                   key={id}
                   id={id}
-                  onVisible={setActiveSection}
+                  onVisible={handleActiveSection}
                   language={language}
                 />
               ))}
