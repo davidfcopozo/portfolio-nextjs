@@ -35,7 +35,7 @@ const Experience = ({
   return (
     <motion.section
       ref={ref}
-      className="experience"
+      className={id}
       id={id}
       initial="hidden"
       whileInView="visible"
