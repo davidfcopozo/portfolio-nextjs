@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   SiBootstrap,
@@ -28,15 +28,12 @@ const Skills = ({
   onVisible: (id: string) => void;
   language: "en" | "es";
 }) => {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) onVisible(id);
+    },
   });
-
-  useEffect(() => {
-    if (inView) {
-      onVisible(id);
-    }
-  }, [inView, id, onVisible]);
 
   return (
     <section id={id} className="skills">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import projectsData from "@/data/projectsData.json";
 import { useInView } from "react-intersection-observer";
@@ -13,15 +13,12 @@ const Projects = ({
   onVisible: (id: string) => void;
   language: "en" | "es";
 }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
+  const { ref } = useInView({
+    threshold: 0.8,
+    onChange: (inView) => {
+      onVisible(inView ? id : "");
+    },
   });
-
-  useEffect(() => {
-    if (inView) {
-      onVisible(id);
-    }
-  }, [inView, id, onVisible]);
 
   return (
     <section className="projects" id={id}>

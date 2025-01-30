@@ -13,16 +13,14 @@ const Experience = ({
   onVisible: (id: string) => void;
   language: "en" | "es";
 }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      onVisible(id);
-    }
-  }, [inView, id, onVisible]);
   const [selected, setSelected] = useState(0);
+
+  const { ref } = useInView({
+    threshold: 0.6,
+    onChange: (inView) => {
+      if (inView) onVisible(id);
+    },
+  });
 
   useEffect(() => {
     const transformSelected = () => {
