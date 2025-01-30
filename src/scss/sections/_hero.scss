@@ -4,7 +4,9 @@
   gap: 1rem;
   justify-content: center;
   width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
+  padding-top: 0;
+  margin-bottom: 1rem;
 
   &-inner-container {
     max-width: 100%;
@@ -47,7 +49,7 @@
 
   @media (min-width: 769px) {
     flex-direction: row;
-    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
     &-inner-container {
       display: flex;
       flex-direction: column;

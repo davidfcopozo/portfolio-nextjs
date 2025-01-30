@@ -1,7 +1,8 @@
 .experience {
   margin: 0 auto;
   max-width: 700px;
-  padding-top: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   .title {
     font-family: var(--raleway);
     color: var(--theme-color);
@@ -66,7 +67,6 @@
       }
     }
     .exp-details {
-      height: 40vh;
       font-family: var(--raleway);
       &-position {
         color: var(--lightest-slate);
@@ -120,5 +120,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .experience {
+    padding-top: 1.5rem;
   }
 }
