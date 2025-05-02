@@ -107,7 +107,7 @@ const ContactForm = ({ language }: { language: "en" | "es" }) => {
                   id="details"
                   placeholder={contactFormData.detailsPlaceholder[language]}
                   required
-                  rows="5"
+                  rows="8"
                 />
                 <ErrorMessage
                   name="details"
