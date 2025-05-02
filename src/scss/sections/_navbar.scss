@@ -60,15 +60,19 @@ nav {
             color: inherit;
             transition: 0.3s ease-in-out;
           }
-          a:focus {
-            outline-color: var(--theme-color);
-          }
           &:hover {
             color: var(--theme-color);
           }
           .active {
             color: #5596bf;
             font-weight: bold;
+            outline: 2px dashed var(--theme-color);
+          }
+
+          &:first-child .active {
+            outline: none;
+            color: var(--lightest-slate);
+            font-weight: normal;
           }
         }
       }
