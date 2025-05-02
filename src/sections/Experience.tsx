@@ -16,7 +16,7 @@ const Experience = ({
   const [selected, setSelected] = useState(0);
 
   const { ref } = useInView({
-    threshold: 0.6,
+    threshold: 0.2,
     onChange: (inView) => {
       if (inView) onVisible(id);
     },

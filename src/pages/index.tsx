@@ -65,12 +65,27 @@ function Index() {
     }
   }, [showContent]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY <= 100) {
+        setActiveSection("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleLanguageChange = (lang: "en" | "es") => {
     setLanguage(lang);
     localStorage.setItem("language", lang);
   };
 
   const handleActiveSection = (id: string) => {
+    if (window.scrollY <= 100 || id === "hero") {
+      setActiveSection("");
+      return;
+    }
     setActiveSection(id);
   };
 

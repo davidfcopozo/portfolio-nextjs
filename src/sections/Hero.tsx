@@ -2,10 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import heroSectionData from "@/data/heroSectionData.json";
+import { useInView } from "react-intersection-observer";
 
 function Hero({ language }: { language: "en" | "es" }) {
+  const { ref } = useInView({
+    threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) {
+        const navLinks = document.querySelectorAll(".nav-items-list-item-link");
+        navLinks.forEach((link) => link.classList.remove("active"));
+      }
+    },
+  });
+
   return (
-    <section className="hero" id="hero">
+    <section ref={ref} className="hero" id="hero">
       <motion.div className="hero-inner-container">
         <motion.h1
           className="hero-title"
