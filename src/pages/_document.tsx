@@ -7,6 +7,7 @@ export default function Document() {
       <Head />
       <body>
         <Main />
+        <SpeedInsights />
         <NextScript />
         <SpeedInsights />
       </body>
