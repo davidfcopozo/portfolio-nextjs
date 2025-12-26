@@ -3,6 +3,7 @@ import "@/scss/index.scss";
 import type { AppProps } from "next/app";
 import { Raleway, Fira_Code, Fugaz_One } from "next/font/google";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 
 const fugazOne = Fugaz_One({
   subsets: ["latin"],
@@ -36,7 +37,8 @@ export default function App({ Component, pageProps }: AppProps) {
           --fugaz-one: ${fugazOne.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
