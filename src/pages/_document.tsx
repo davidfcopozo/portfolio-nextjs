@@ -9,7 +9,6 @@ export default function Document() {
         <Main />
         <SpeedInsights />
         <NextScript />
-        <SpeedInsights />
       </body>
     </Html>
   );
