@@ -1,8 +1,8 @@
 .skills {
   overflow: hidden;
-  padding-top: 4rem;
+  padding-top: 2rem;
   .title {
-    padding-top: 7rem;
+    padding-top: 4rem;
     h2 {
       font-family: var(--raleway);
       color: var(--theme-color);
@@ -14,7 +14,7 @@
   }
   .lang-wrapper-container {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -42,7 +42,7 @@
       .tailwind-css,
       .sql,
       .firebase {
-        font-size: 8rem;
+        font-size: 7rem;
         color: var(--lang-icon-color);
       }
 
@@ -62,70 +62,29 @@
       .firebase:hover,
       .sql:hover,
       .tailwind-css:hover {
-        transition: ease-in-out 0.3s;
+        transition: ease-in-out 0.25s;
         transform: scale(1.1);
       }
 
-      .fa-html5:hover {
-        color: #e34e26;
-      }
-
-      .fa-css3:hover {
-        color: #0277bd;
-      }
-
-      .fa-js:hover {
-        color: #d4b830;
-      }
-
-      .fa-sass:hover {
-        color: #cd6799;
-      }
-
-      .fa-react:hover {
-        color: #53c1de;
-      }
-
-      .fa-bootstrap:hover {
-        color: #563d7c;
-      }
-
-      .cib-next-js:hover {
-        fill: #474747;
-      }
-
-      .cib-redux:hover {
-        fill: #764abc;
-      }
-
-      .fa-fan:hover {
-        color: #f23e50;
-      }
-
-      .php:hover {
-        color: #7377ad;
-      }
-
-      .node-js:hover {
-        color: #74b15b;
-      }
-
-      .mongo-db:hover {
-        color: #59b747;
-      }
-
-      .tailwind-css:hover {
-        color: #3ebff8;
-      }
-
-      .firebase:hover {
-        color: #ffa714;
-      }
+      .fa-html5:hover { color: #e34e26; }
+      .fa-css3:hover  { color: #0277bd; }
+      .fa-js:hover    { color: #d4b830; }
+      .fa-sass:hover  { color: #cd6799; }
+      .fa-react:hover { color: #53c1de; }
+      .fa-bootstrap:hover { color: #563d7c; }
+      .cib-next-js:hover  { fill: #474747; }
+      .cib-redux:hover    { fill: #764abc; }
+      .fa-fan:hover       { color: #f23e50; }
+      .php:hover          { color: #7377ad; }
+      .node-js:hover      { color: #74b15b; }
+      .mongo-db:hover     { color: #59b747; }
+      .tailwind-css:hover { color: #3ebff8; }
+      .firebase:hover     { color: #ffa714; }
     }
   }
   .learning-skills {
-    margin-top: 4rem;
-    padding-block: 3rem;
+    margin-top: 3.5rem;
+    padding-block: 2.5rem;
     h2 {
       font-family: var(--raleway);
       color: var(--theme-color);
@@ -153,7 +112,7 @@
       .node-js,
       .sql,
       .php {
-        font-size: 8rem;
+        font-size: 7rem;
         color: var(--lang-icon-color);
       }
 
@@ -161,7 +120,7 @@
       .sql:hover,
       .php:hover,
       .node-js:hover {
-        transition: ease-in-out 0.3s;
+        transition: ease-in-out 0.25s;
         transform: scale(1.1);
       }
 
@@ -194,7 +153,7 @@
         .mongo-db,
         .tailwind-css,
         .firebase {
-          font-size: 5rem;
+          font-size: 4.5rem;
         }
       }
     }
@@ -202,7 +161,7 @@
       .language-wrapper {
         .php,
         .sql {
-          font-size: 5rem;
+          font-size: 4.5rem;
         }
       }
     }

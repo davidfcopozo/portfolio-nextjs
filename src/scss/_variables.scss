@@ -2,15 +2,18 @@
   --xsFont: clamp(0.5em, 2vw, 0.8em);
   --tsm: 13px;
   --tsm1: 14px;
-  --tsm2: clamp(1em, 4vw, 1.5em);
+  /* greeting / pre-title line — distinct from body */
+  --tsm2: clamp(0.875rem, 2.5vw, 1rem);
   --tbase: 16px;
-  --tlarge: clamp(1em, 4vw, 1.5em);
-  --tlarge2: 22px;
-  --txlarge: 25px;
-  --tx2large: 32px;
-  --tgiant: clamp(1.5em, 10vw, 3em);
+  /* body paragraphs — was clamp(1em, 4vw, 1.5em) which over-scaled */
+  --tlarge: clamp(1rem, 1.25vw, 1.125rem);
+  --tlarge2: 1.375rem;
+  --txlarge: 1.5625rem;
+  /* section headings */
+  --tx2large: 2rem;
+  /* hero name / contact CTA — slightly larger and less aggressive vw */
+  --tgiant: clamp(2.25rem, 8vw, 3.75rem);
   @media screen and (max-width: 480px) {
-    --tx2large: 25px;
-    // --tgiant: 40px;
+    --tx2large: 1.5625rem;
   }
 }
