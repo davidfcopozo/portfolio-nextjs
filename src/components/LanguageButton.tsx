@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useRef, useEffect } from "react";
 
 const languages = [
@@ -46,6 +44,7 @@ export default function LanguageButton({
           className="language-button"
           onClick={handleDropdownClick}
           aria-expanded={languageDropdownOpen}
+          aria-haspopup="listbox"
         >
           {language.toUpperCase()}
         </button>
@@ -54,13 +53,15 @@ export default function LanguageButton({
           className={`language-dropdown-content ${
             languageDropdownOpen ? "show" : ""
           }`}
+          role="listbox"
         >
           {languages.map((lang) => (
             <button
               key={lang.code}
               className="language-dropdown-item"
+              role="option"
+              aria-selected={lang.code === language}
               onClick={() => {
-                console.log("Language selected:", lang.code);
                 handleLanguageChange(lang.code as "en" | "es");
                 setLanguageDropdownOpen(false);
               }}

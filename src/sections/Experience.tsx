@@ -38,14 +38,14 @@ const Experience = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       variants={{
-        visible: { opacity: 1, y: -50 },
+        visible: { opacity: 1, y: -20 },
         hidden: { opacity: 0, y: 0 },
       }}
     >
       <div className="title">
-        <h2>{language === "en" ? "My Esperience" : "Mis Experiencias"}</h2>
+        <h2>{language === "en" ? "My Experience" : "Mis Experiencias"}</h2>
       </div>
       <div className="container">
         <ul className="exp-slider">
@@ -72,12 +72,12 @@ const Experience = ({
               <span className="exp-details-position-company">
                 &nbsp;@&nbsp;
                 <Link href={experiences[selected].url} className="link">
-                  {experiences[selected].end[language]}
+                  {experiences[selected].name[language]}
                 </Link>
               </span>
             </h3>
             <p className="exp-details-range">
-              {experiences[selected].start[language]} -{" "}
+              {experiences[selected].start[language]} &ndash;{" "}
               {experiences[selected].end[language]}
             </p>
             <ul className="exp-details-list">
